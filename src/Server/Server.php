@@ -15,14 +15,24 @@ class Server implements Marshallable
 
 	protected string $url;
 
-	protected ?string $description;
+	protected ?string $description = null;
 
 	protected ServerVariables $variables;
+
+	public function __construct()
+	{
+		$this->variables = new ServerVariables();
+	}
 
 	public function setUrl(string $url): self
 	{
 		$this->url = $url;
 		return $this;
+	}
+
+	public function getUrl(): string
+	{
+		return $this->url;
 	}
 
 	public function setDescription(?string $description): self
@@ -31,9 +41,19 @@ class Server implements Marshallable
 		return $this;
 	}
 
+	public function getDescription(): ?string
+	{
+		return $this->description;
+	}
+
 	public function addVariable(string $key, ServerVariable $variable): self
 	{
 		$this->variables->add($key, $variable);
 		return $this;
+	}
+
+	public function getVariables(): ServerVariables
+	{
+		return $this->variables;
 	}
 }

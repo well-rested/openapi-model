@@ -15,14 +15,19 @@ class Tag implements Marshallable
 
 	protected string $name;
 
-	protected ?string $description;
+	protected ?string $description = null;
 
-	protected ?ExternalDocumentation $externalDocs;
+	protected ?ExternalDocumentation $externalDocs = null;
 
 	public function setName(string $name): self
 	{
 		$this->name = $name;
 		return $this;
+	}
+
+	public function getName(): string
+	{
+		return $this->name;
 	}
 
 	public function setDescription(?string $description): self
@@ -31,9 +36,19 @@ class Tag implements Marshallable
 		return $this;
 	}
 
+	public function getDescription(): ?string
+	{
+		return $this->description;
+	}
+
 	public function setExternalDocs(?ExternalDocumentation $externalDocs): self
 	{
 		$this->externalDocs = $externalDocs;
 		return $this;
+	}
+
+	public function getExternalDocs(): ?ExternalDocumentation
+	{
+		return $this->externalDocs;
 	}
 }

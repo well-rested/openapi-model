@@ -13,7 +13,7 @@ class ExternalDocumentation implements Marshallable
 	use ConvertsSelfToMarshallable;
 	use HasCustomAttributes;
 
-	protected ?string $description;
+	protected ?string $description = null;
 
 	protected string $url;
 
@@ -23,9 +23,19 @@ class ExternalDocumentation implements Marshallable
 		return $this;
 	}
 
+	public function getDescription(): ?string
+	{
+		return $this->description;
+	}
+
 	public function setUrl(string $url): self
 	{
 		$this->url = $url;
 		return $this;
+	}
+
+	public function getUrl(): string
+	{
+		return $this->url;
 	}
 }

@@ -32,15 +32,30 @@ class Response implements Marshallable
 		return $this;
 	}
 
+	public function getHeaders(): Headers
+	{
+		return $this->headers;
+	}
+
 	public function setDescription(string $description): self
 	{
 		$this->description = $description;
 		return $this;
 	}
 
+	public function getDescription(): string
+	{
+		return $this->description;
+	}
+
 	public function addMediaType(string $key, MediaType $mediaType): self
 	{
 		$this->content->add($key, $mediaType);
 		return $this;
+	}
+
+	public function getContent(): Content
+	{
+		return $this->content;
 	}
 }

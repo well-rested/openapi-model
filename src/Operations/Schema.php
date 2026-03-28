@@ -13,31 +13,31 @@ class Schema implements Marshallable
 	use ConvertsSelfToMarshallable;
 	use HasCustomAttributes;
 
-	protected ?string $ref;
+	protected ?string $ref = null;
 
 	protected ?string $description = null;
 
 	/** @var string[] $required */
 	protected array $required;
 
-	protected ?bool $writeOnly;
+	protected ?bool $writeOnly = null;
 
-	protected ?bool $readOnly;
+	protected ?bool $readOnly = null;
 
-	protected ?string $type;
+	protected ?string $type = null;
 
-	protected ?string $format;
+	protected ?string $format = null;
 
-	protected ?int $exclusiveMaximum;
+	protected ?int $exclusiveMaximum = null;
 
-	protected ?int $exclusiveMinimum;
+	protected ?int $exclusiveMinimum = null;
 
 	/** @var string[] $enum */
 	protected array $enum;
 
-	protected ?bool $nullable;
+	protected ?bool $nullable = null;
 
-	protected ?Schema $items;
+	protected ?Schema $items = null;
 
 	protected Schemas $properties;
 
@@ -48,7 +48,7 @@ class Schema implements Marshallable
 	protected PolymorphicSchemas $allOf;
 
 	// Not sure if there is a strict schema for this, can be all sorts...
-	protected mixed $examples;
+	protected mixed $examples = null;
 
 	public function __construct()
 	{
@@ -66,16 +66,31 @@ class Schema implements Marshallable
 		return $this;
 	}
 
+	public function getRef(): ?string
+	{
+		return $this->ref;
+	}
+
 	public function setType(string $type): self
 	{
 		$this->type = $type;
 		return $this;
 	}
 
+	public function getType(): ?string
+	{
+		return $this->type;
+	}
+
 	public function setFormat(string $format): self
 	{
 		$this->format = $format;
 		return $this;
+	}
+
+	public function getFormat(): ?string
+	{
+		return $this->format;
 	}
 
 	public function addOneOfSchemas(Schema ...$schemas): self
@@ -85,11 +100,21 @@ class Schema implements Marshallable
 		return $this;
 	}
 
+	public function getOneOf(): PolymorphicSchemas
+	{
+		return $this->oneOf;
+	}
+
 	public function addAnyOfSchemas(Schema ...$schemas): self
 	{
 		$this->anyOf->add(...$schemas);
 
 		return $this;
+	}
+
+	public function getAnyOf(): PolymorphicSchemas
+	{
+		return $this->anyOf;
 	}
 
 	public function addAllOfSchemas(Schema ...$schemas): self
@@ -99,10 +124,20 @@ class Schema implements Marshallable
 		return $this;
 	}
 
+	public function getAllOf(): PolymorphicSchemas
+	{
+		return $this->allOf;
+	}
+
 	public function setItems(Schema $items): self
 	{
 		$this->items = $items;
 		return $this;
+	}
+
+	public function getItems(): ?Schema
+	{
+		return $this->items;
 	}
 
 	public function setExamples(mixed $examples): self
@@ -111,10 +146,20 @@ class Schema implements Marshallable
 		return $this;
 	}
 
+	public function getExamples(): mixed
+	{
+		return $this->examples;
+	}
+
 	public function setExclusiveMaximum(int $exclusiveMaximum): self
 	{
 		$this->exclusiveMaximum = $exclusiveMaximum;
 		return $this;
+	}
+
+	public function getExclusiveMaximum(): ?int
+	{
+		return $this->exclusiveMaximum;
 	}
 
 	public function setExclusiveMinimum(int $exclusiveMinimum): self
@@ -123,16 +168,31 @@ class Schema implements Marshallable
 		return $this;
 	}
 
+	public function getExclusiveMinimum(): ?int
+	{
+		return $this->exclusiveMinimum;
+	}
+
 	public function setDescription(?string $description): self
 	{
 		$this->description = $description;
 		return $this;
 	}
 
+	public function getDescription(): ?string
+	{
+		return $this->description;
+	}
+
 	public function setNullable(bool $nullable): self
 	{
 		$this->nullable = $nullable;
 		return $this;
+	}
+
+	public function getNullable(): ?bool
+	{
+		return $this->nullable;
 	}
 
 	public function markFieldsAsRequired(string ...$fields): self
@@ -144,28 +204,26 @@ class Schema implements Marshallable
 		return $this;
 	}
 
-	public function isWriteOnly(): self
+	public function setWriteOnly(bool $writeOnly): self
 	{
-		$this->writeOnly = true;
+		$this->writeOnly = $writeOnly;
 		return $this;
 	}
 
-	public function isNotWriteOnly(): self
+	public function getWriteOnly(): ?bool
 	{
-		$this->writeOnly = false;
+		return $this->writeOnly;
+	}
+
+	public function setReadOnly(bool $readOnly): self
+	{
+		$this->readOnly = $readOnly;
 		return $this;
 	}
 
-	public function isReadOnly(): self
+	public function getReadOnly(): ?bool
 	{
-		$this->readOnly = true;
-		return $this;
-	}
-
-	public function isNotReadOnly(): self
-	{
-		$this->readOnly = false;
-		return $this;
+		return $this->readOnly;
 	}
 
 	public function addProperty(string $key, Schema $property): self
@@ -174,9 +232,20 @@ class Schema implements Marshallable
 		return $this;
 	}
 
+	public function getProperties(): Schemas
+	{
+		return $this->properties;
+	}
+
 	public function addEnumCases(string ...$cases): self
 	{
 		$this->enum = array_merge($this->enum, $cases);
 		return $this;
+	}
+
+	/** @return string[] */
+	public function getEnumCases(): array
+	{
+		return $this->enum;
 	}
 }

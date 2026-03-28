@@ -13,15 +13,15 @@ class Header implements Marshallable
 	use ConvertsSelfToMarshallable;
 	use HasCustomAttributes;
 
-	protected ?string $description;
+	protected ?string $description = null;
 
 	protected bool $required = false;
 
 	protected bool $deprecated = false;
 
-	protected ?Schema $schema;
+	protected ?Schema $schema = null;
 
-	protected ?Content $content;
+	protected ?Content $content = null;
 
 	public function setDescription(?string $description): self
 	{
@@ -29,28 +29,31 @@ class Header implements Marshallable
 		return $this;
 	}
 
-	public function isRequired(): self
+	public function getDescription(): ?string
 	{
-		$this->required = true;
+		return $this->description;
+	}
+
+	public function setRequired(bool $required): self
+	{
+		$this->required = $required;
 		return $this;
 	}
 
-	public function isNotRequired(): self
+	public function getRequired(): bool
 	{
-		$this->required = false;
+		return $this->required;
+	}
+
+	public function setDeprecated(bool $deprecated): self
+	{
+		$this->deprecated = $deprecated;
 		return $this;
 	}
 
-	public function isDeprecated(): self
+	public function getDeprecated(): bool
 	{
-		$this->deprecated = true;
-		return $this;
-	}
-
-	public function isNotDeprecated(): self
-	{
-		$this->deprecated = false;
-		return $this;
+		return $this->deprecated;
 	}
 
 	public function setSchema(Schema $schema): self
@@ -59,9 +62,19 @@ class Header implements Marshallable
 		return $this;
 	}
 
+	public function getSchema(): ?Schema
+	{
+		return $this->schema;
+	}
+
 	public function setContent(Content $content): self
 	{
 		$this->content = $content;
 		return $this;
+	}
+
+	public function getContent(): ?Content
+	{
+		return $this->content;
 	}
 }

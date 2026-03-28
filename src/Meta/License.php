@@ -15,14 +15,19 @@ class License implements Marshallable
 
 	protected string $name;
 
-	protected ?string $identifier;
+	protected ?string $identifier = null;
 
-	protected ?string $url;
+	protected ?string $url = null;
 
 	public function setName(string $name): self
 	{
 		$this->name = $name;
 		return $this;
+	}
+
+	public function getName(): string
+	{
+		return $this->name;
 	}
 
 	public function setIdentifier(?string $identifier): self
@@ -31,9 +36,19 @@ class License implements Marshallable
 		return $this;
 	}
 
+	public function getIdentifier(): ?string
+	{
+		return $this->identifier;
+	}
+
 	public function setUrl(?string $url): self
 	{
 		$this->url = $url;
 		return $this;
+	}
+
+	public function getUrl(): ?string
+	{
+		return $this->url;
 	}
 }
