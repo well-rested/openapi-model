@@ -98,7 +98,7 @@ class PetStoreTest extends TestCase
 									(new Schema())
 										->setRef("#/components/schemas/Pet")
 										->setDescription("A Pet in XML Format")
-										->isReadOnly(),
+										->setReadOnly(true),
 								),
 						)
 						->addMediaType(
@@ -108,7 +108,7 @@ class PetStoreTest extends TestCase
 									(new Schema())
 										->setRef("#/components/schemas/Pet")
 										->setDescription("A Pet in JSON Format")
-										->isReadOnly(),
+										->setReadOnly(true),
 								),
 						),
 				)
@@ -118,7 +118,7 @@ class PetStoreTest extends TestCase
 				->addResponse("default", (new Response())->setDescription("Unexpected error"))
 				->setRequestBody(
 					(new RequestBody())
-						->isRequired()
+						->setRequired(true)
 						->setDescription("Pet object that needs to be updated in the store")
 						->addMediaType(
 							"application/json",
@@ -128,7 +128,7 @@ class PetStoreTest extends TestCase
 										->markFieldsAsRequired("id")
 										->setRef("#/components/schemas/Pet")
 										->setDescription("A Pet in JSON Format")
-										->isWriteOnly(),
+										->setWriteOnly(true),
 								),
 						)
 						->addMediaType(
@@ -139,7 +139,7 @@ class PetStoreTest extends TestCase
 									->markFieldsAsRequired("id")
 									->setRef("#/components/schemas/Pet")
 									->setDescription("A Pet in XML Format")
-									->isWriteOnly(),
+									->setWriteOnly(true),
 							),
 						),
 				),
@@ -160,7 +160,7 @@ class PetStoreTest extends TestCase
 				)
 				->setRequestBody(
 					(new RequestBody())
-						->isRequired()
+						->setRequired(true)
 						->setDescription("Create a new pet in the store")
 						->addMediaType(
 							"application/json",
@@ -170,7 +170,7 @@ class PetStoreTest extends TestCase
 										->setRef("#/components/schemas/Pet")
 										->setDescription("A Pet in JSON Format")
 										->markFieldsAsRequired("id")
-										->isWriteOnly(),
+										->setWriteOnly(true),
 								),
 						)
 						->addMediaType(
@@ -181,7 +181,7 @@ class PetStoreTest extends TestCase
 										->setRef("#/components/schemas/Pet")
 										->setDescription("A Pet in XML Format")
 										->markFieldsAsRequired("id")
-										->isWriteOnly(),
+										->setWriteOnly(true),
 								),
 						),
 				)
@@ -198,7 +198,7 @@ class PetStoreTest extends TestCase
 									(new Schema())
 										->setRef("#/components/schemas/Pet")
 										->setDescription("A Pet in XML Format")
-										->isReadOnly(),
+										->setReadOnly(true),
 								),
 						)
 						->addMediaType(
@@ -208,7 +208,7 @@ class PetStoreTest extends TestCase
 									(new Schema())
 										->setRef("#/components/schemas/Pet")
 										->setDescription("A Pet in JSON format")
-										->isReadOnly(),
+										->setReadOnly(true),
 								),
 						),
 				),
@@ -242,7 +242,7 @@ class PetStoreTest extends TestCase
 						->setName("petId")
 						->setIn("path")
 						->setDescription("ID of pet that needs to be fetched")
-						->isRequired()
+						->setRequired(true)
 						->setSchema(
 							(new Schema())
 								->setType("integer")

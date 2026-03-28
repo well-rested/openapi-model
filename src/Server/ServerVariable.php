@@ -18,7 +18,7 @@ class ServerVariable implements Marshallable
 
 	protected string $default;
 
-	protected ?string $description;
+	protected ?string $description = null;
 
 	/**
 	 * @param string[] $enum
@@ -29,15 +29,31 @@ class ServerVariable implements Marshallable
 		return $this;
 	}
 
+	/** @return string[] */
+	public function getEnum(): array
+	{
+		return $this->enum;
+	}
+
 	public function setDefault(string $default): self
 	{
 		$this->default = $default;
 		return $this;
 	}
 
+	public function getDefault(): string
+	{
+		return $this->default;
+	}
+
 	public function setDescription(?string $description): self
 	{
 		$this->description = $description;
 		return $this;
+	}
+
+	public function getDescription(): ?string
+	{
+		return $this->description;
 	}
 }

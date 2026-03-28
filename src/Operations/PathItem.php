@@ -16,31 +16,31 @@ class PathItem implements Marshallable
 	use ConvertsSelfToMarshallable;
 	use HasCustomAttributes;
 
-	protected ?string $ref;
+	protected ?string $ref = null;
 
-	protected ?string $summary;
+	protected ?string $summary = null;
 
-	protected ?string $description;
+	protected ?string $description = null;
 
 	protected Servers $servers;
 
 	protected Parameters $parameters;
 
-	protected ?Operation $get;
+	protected ?Operation $get = null;
 
-	protected ?Operation $put;
+	protected ?Operation $put = null;
 
-	protected ?Operation $post;
+	protected ?Operation $post = null;
 
-	protected ?Operation $delete;
+	protected ?Operation $delete = null;
 
-	protected ?Operation $options;
+	protected ?Operation $options = null;
 
-	protected ?Operation $head;
+	protected ?Operation $head = null;
 
-	protected ?Operation $patch;
+	protected ?Operation $patch = null;
 
-	protected ?Operation $trace;
+	protected ?Operation $trace = null;
 
 	public function __construct()
 	{
@@ -54,10 +54,20 @@ class PathItem implements Marshallable
 		return $this;
 	}
 
+	public function getRef(): ?string
+	{
+		return $this->ref;
+	}
+
 	public function setSummary(?string $summary): self
 	{
 		$this->summary = $summary;
 		return $this;
+	}
+
+	public function getSummary(): ?string
+	{
+		return $this->summary;
 	}
 
 	public function setDescription(?string $description): self
@@ -66,10 +76,20 @@ class PathItem implements Marshallable
 		return $this;
 	}
 
+	public function getDescription(): ?string
+	{
+		return $this->description;
+	}
+
 	public function addServer(Server ...$servers): self
 	{
 		$this->servers->add(...$servers);
 		return $this;
+	}
+
+	public function getServers(): Servers
+	{
+		return $this->servers;
 	}
 
 	public function addParameters(Parameter|Reference ...$parameters): self
@@ -78,10 +98,20 @@ class PathItem implements Marshallable
 		return $this;
 	}
 
+	public function getParameters(): Parameters
+	{
+		return $this->parameters;
+	}
+
 	public function setGet(?Operation $get): self
 	{
 		$this->get = $get;
 		return $this;
+	}
+
+	public function getGet(): ?Operation
+	{
+		return $this->get;
 	}
 
 	public function setPut(?Operation $put): self
@@ -90,10 +120,20 @@ class PathItem implements Marshallable
 		return $this;
 	}
 
+	public function getPut(): ?Operation
+	{
+		return $this->put;
+	}
+
 	public function setPost(?Operation $post): self
 	{
 		$this->post = $post;
 		return $this;
+	}
+
+	public function getPost(): ?Operation
+	{
+		return $this->post;
 	}
 
 	public function setDelete(?Operation $delete): self
@@ -102,10 +142,20 @@ class PathItem implements Marshallable
 		return $this;
 	}
 
+	public function getDelete(): ?Operation
+	{
+		return $this->delete;
+	}
+
 	public function setOptions(?Operation $options): self
 	{
 		$this->options = $options;
 		return $this;
+	}
+
+	public function getOptions(): ?Operation
+	{
+		return $this->options;
 	}
 
 	public function setHead(?Operation $head): self
@@ -114,15 +164,30 @@ class PathItem implements Marshallable
 		return $this;
 	}
 
+	public function getHead(): ?Operation
+	{
+		return $this->head;
+	}
+
 	public function setPatch(?Operation $patch): self
 	{
 		$this->patch = $patch;
 		return $this;
 	}
 
+	public function getPatch(): ?Operation
+	{
+		return $this->patch;
+	}
+
 	public function setTrace(?Operation $trace): self
 	{
 		$this->trace = $trace;
 		return $this;
+	}
+
+	public function getTrace(): ?Operation
+	{
+		return $this->trace;
 	}
 }

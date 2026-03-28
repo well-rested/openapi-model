@@ -6,10 +6,11 @@ namespace Tests\Unit\Spec;
 
 use Generator;
 use InvalidArgumentException;
-use PHPUnit\Framework\TestCase;
-use PHPUnit\Framework\Attributes\DataProvider;
-use OpenApiSchema\Spec\StringDictionary;
 use OpenApiSchema\Spec\MarshallingContext;
+use OpenApiSchema\Spec\StringDictionary;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\TestCase;
+use stdClass;
 
 /**
  * This actually covers base functionality of the abstract and this specific
@@ -82,6 +83,17 @@ class StringDictionaryTest extends TestCase
 
 		$this->assertEquals(
 			["key1" => "some", "key2" => "strings"],
+			$dict->toMarshallable($ctx),
+		);
+	}
+
+	public function test_to_marshallable_when_empty(): void
+	{
+		$ctx = $this->createStub(MarshallingContext::class);
+		$dict = new StringDictionary();
+
+		$this->assertEquals(
+			new stdClass(),
 			$dict->toMarshallable($ctx),
 		);
 	}

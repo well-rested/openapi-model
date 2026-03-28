@@ -38,7 +38,7 @@ class VeryBasicTest extends TestCase
 							->addParameters(
 								(new OA\Operations\Parameter())
 									->setName("id")
-									->isRequired()
+									->setRequired(true)
 									->setIn("path")
 									->setSchema(
 										(new OA\Operations\Schema())->setType("integer"),
@@ -67,7 +67,7 @@ class VeryBasicTest extends TestCase
 							->addResponse("404", (new OA\Operations\Response())->setDescription("resource not found"))
 							->setRequestBody(
 								(new OA\Operations\RequestBody())
-									->isRequired()
+									->setRequired(true)
 									->setDescription("Resource data structure")
 									->addMediaType(
 										"application/json",
@@ -195,7 +195,7 @@ class VeryBasicTest extends TestCase
 					(new OA\Operations\Parameter()) // JSON path `.paths[/api/v1/users/{id}].parameters[0]`
 						->setName("id") // JSON path `.paths[/api/v1/users/{id}].parameters[0].name`
 						->setIn("path") // JSON path `.paths[/api/v1/users/{id}].parameters[0].in`
-						->isRequired() // JSON path `.paths[/api/v1/users/{id}].parameters[0].required`
+						->setRequired(true) // JSON path `.paths[/api/v1/users/{id}].parameters[0].required`
 						->setSchema(
 							(new OA\Operations\Schema()) // JSON path `.paths[/api/v1/users/{id}].parameters[0].schema`
 								->setType("integer"), // JSON path `.paths[/api/v1/users/{id}].parameters[0].schema.type`

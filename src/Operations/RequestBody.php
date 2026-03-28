@@ -13,11 +13,11 @@ class RequestBody implements Marshallable
 	use ConvertsSelfToMarshallable;
 	use HasCustomAttributes;
 
-	protected ?string $description;
+	protected ?string $description = null;
 
 	protected Content $content;
 
-	protected ?bool $required;
+	protected ?bool $required = null;
 
 	public function __construct()
 	{
@@ -30,10 +30,20 @@ class RequestBody implements Marshallable
 		return $this;
 	}
 
+	public function getDescription(): ?string
+	{
+		return $this->description;
+	}
+
 	public function addMediaType(string $key, MediaType $mediaType): self
 	{
 		$this->content->add($key, $mediaType);
 		return $this;
+	}
+
+	public function getContent(): Content
+	{
+		return $this->content;
 	}
 
 	public function setRequired(bool $required): self
@@ -42,17 +52,8 @@ class RequestBody implements Marshallable
 		return $this;
 	}
 
-	/** @deprecated use setRequired */
-	public function isRequired(): self
+	public function getRequired(): ?bool
 	{
-		$this->required = true;
-		return $this;
-	}
-
-	/** @deprecated use setRequired */
-	public function isNotRequired(): self
-	{
-		$this->required = false;
-		return $this;
+		return $this->required;
 	}
 }

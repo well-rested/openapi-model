@@ -13,16 +13,21 @@ class Contact implements Marshallable
 	use ConvertsSelfToMarshallable;
 	use HasCustomAttributes;
 
-	protected ?string $name;
+	protected ?string $name = null;
 
-	protected ?string $url;
+	protected ?string $url = null;
 
-	protected ?string $email;
+	protected ?string $email = null;
 
 	public function setName(?string $name): self
 	{
 		$this->name = $name;
 		return $this;
+	}
+
+	public function getName(): ?string
+	{
+		return $this->name;
 	}
 
 	public function setUrl(?string $url): self
@@ -31,9 +36,19 @@ class Contact implements Marshallable
 		return $this;
 	}
 
+	public function getUrl(): ?string
+	{
+		return $this->url;
+	}
+
 	public function setEmail(?string $email): self
 	{
 		$this->email = $email;
 		return $this;
+	}
+
+	public function getEmail(): ?string
+	{
+		return $this->email;
 	}
 }

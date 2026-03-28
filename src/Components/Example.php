@@ -13,18 +13,23 @@ class Example implements Marshallable
 	use ConvertsSelfToMarshallable;
 	use HasCustomAttributes;
 
-	protected ?string $description;
+	protected ?string $description = null;
 
-	protected ?string $summary;
+	protected ?string $summary = null;
 
-	protected mixed $value;
+	protected mixed $value = null;
 
-	protected ?string $externalValue;
+	protected ?string $externalValue = null;
 
 	public function setDescription(?string $description): self
 	{
 		$this->description = $description;
 		return $this;
+	}
+
+	public function getDescription(): ?string
+	{
+		return $this->description;
 	}
 
 	public function setSummary(?string $summary): self
@@ -33,15 +38,30 @@ class Example implements Marshallable
 		return $this;
 	}
 
+	public function getSummary(): ?string
+	{
+		return $this->summary;
+	}
+
 	public function setValue(mixed $value): self
 	{
 		$this->value = $value;
 		return $this;
 	}
 
+	public function getValue(): mixed
+	{
+		return $this->value;
+	}
+
 	public function setExternalValue(?string $externalValue): self
 	{
 		$this->externalValue = $externalValue;
 		return $this;
+	}
+
+	public function getExternalValue(): ?string
+	{
+		return $this->externalValue;
 	}
 }

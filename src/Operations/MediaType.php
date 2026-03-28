@@ -23,9 +23,19 @@ class MediaType implements Marshallable
 		return $this;
 	}
 
+	public function getSchema(): Schema
+	{
+		return $this->schema;
+	}
+
 	public function setEncoding(Encoding $encoding): self
 	{
 		$this->encoding = $encoding;
 		return $this;
+	}
+
+	public function getEncoding(): Encoding
+	{
+		return $this->encoding;
 	}
 }

@@ -21,17 +21,17 @@ class Operation implements Marshallable
 	/** @var string[] $tags */
 	protected array $tags;
 
-	protected ?string $summary;
+	protected ?string $summary = null;
 
-	protected ?string $description;
+	protected ?string $description = null;
 
-	protected ?ExternalDocumentation $externalDocs;
+	protected ?ExternalDocumentation $externalDocs = null;
 
-	protected ?string $operationId;
+	protected ?string $operationId = null;
 
 	protected Parameters $parameters;
 
-	protected ?RequestBody $requestBody;
+	protected ?RequestBody $requestBody = null;
 
 	protected Security $security;
 
@@ -39,7 +39,7 @@ class Operation implements Marshallable
 
 	protected Servers $servers;
 
-	protected ?bool $deprecated;
+	protected ?bool $deprecated = null;
 
 	// Need to deal with this one still...
 	protected PathItems $callbacks;
@@ -60,10 +60,21 @@ class Operation implements Marshallable
 		return $this;
 	}
 
+	/** @return string[] */
+	public function getTags(): array
+	{
+		return $this->tags;
+	}
+
 	public function setSummary(?string $summary): self
 	{
 		$this->summary = $summary;
 		return $this;
+	}
+
+	public function getSummary(): ?string
+	{
+		return $this->summary;
 	}
 
 	public function setDescription(?string $description): self
@@ -72,10 +83,20 @@ class Operation implements Marshallable
 		return $this;
 	}
 
+	public function getDescription(): ?string
+	{
+		return $this->description;
+	}
+
 	public function setExternalDocs(?ExternalDocumentation $externalDocs): self
 	{
 		$this->externalDocs = $externalDocs;
 		return $this;
+	}
+
+	public function getExternalDocs(): ?ExternalDocumentation
+	{
+		return $this->externalDocs;
 	}
 
 	public function setOperationId(?string $operationId): self
@@ -84,10 +105,20 @@ class Operation implements Marshallable
 		return $this;
 	}
 
+	public function getOperationId(): ?string
+	{
+		return $this->operationId;
+	}
+
 	public function addParameters(Parameter ...$parameters): self
 	{
 		$this->parameters->add(...$parameters);
 		return $this;
+	}
+
+	public function getParameters(): Parameters
+	{
+		return $this->parameters;
 	}
 
 	public function setRequestBody(?RequestBody $requestBody): self
@@ -96,10 +127,20 @@ class Operation implements Marshallable
 		return $this;
 	}
 
+	public function getRequestBody(): ?RequestBody
+	{
+		return $this->requestBody;
+	}
+
 	public function addResponse(string $key, Response|Reference $response): self
 	{
 		$this->responses->add($key, $response);
 		return $this;
+	}
+
+	public function getResponses(): Responses
+	{
+		return $this->responses;
 	}
 
 	public function addCallback(string $key, PathItem $pathItem): self
@@ -108,10 +149,20 @@ class Operation implements Marshallable
 		return $this;
 	}
 
+	public function getCallbacks(): PathItems
+	{
+		return $this->callbacks;
+	}
+
 	public function setDeprecated(?bool $deprecated): self
 	{
 		$this->deprecated = $deprecated;
 		return $this;
+	}
+
+	public function getDeprecated(): ?bool
+	{
+		return $this->deprecated;
 	}
 
 	public function addSecurityRequirement(SecurityRequirements $requirement): self
@@ -120,9 +171,19 @@ class Operation implements Marshallable
 		return $this;
 	}
 
+	public function getSecurity(): Security
+	{
+		return $this->security;
+	}
+
 	public function addServers(Server ...$servers): self
 	{
 		$this->servers->add(...$servers);
 		return $this;
+	}
+
+	public function getServers(): Servers
+	{
+		return $this->servers;
 	}
 }

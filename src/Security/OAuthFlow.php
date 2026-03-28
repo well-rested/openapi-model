@@ -14,11 +14,11 @@ class OAuthFlow implements Marshallable
 	use ConvertsSelfToMarshallable;
 	use HasCustomAttributes;
 
-	protected ?string $authorizationUrl;
+	protected ?string $authorizationUrl = null;
 
-	protected ?string $tokenUrl;
+	protected ?string $tokenUrl = null;
 
-	protected ?string $refreshUrl;
+	protected ?string $refreshUrl = null;
 
 	protected StringDictionary $scopes;
 
@@ -33,10 +33,20 @@ class OAuthFlow implements Marshallable
 		return $this;
 	}
 
+	public function getAuthorizationUrl(): ?string
+	{
+		return $this->authorizationUrl;
+	}
+
 	public function setTokenUrl(string $tokenUrl): self
 	{
 		$this->tokenUrl = $tokenUrl;
 		return $this;
+	}
+
+	public function getTokenUrl(): ?string
+	{
+		return $this->tokenUrl;
 	}
 
 	public function setRefreshUrl(string $refreshUrl): self
@@ -45,9 +55,19 @@ class OAuthFlow implements Marshallable
 		return $this;
 	}
 
+	public function getRefreshUrl(): ?string
+	{
+		return $this->refreshUrl;
+	}
+
 	public function addScope(string $key, string $value): self
 	{
 		$this->scopes->add($key, $value);
 		return $this;
+	}
+
+	public function getScopes(): StringDictionary
+	{
+		return $this->scopes;
 	}
 }

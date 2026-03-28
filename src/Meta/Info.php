@@ -15,15 +15,15 @@ class Info implements Marshallable
 
 	protected string $title;
 
-	protected ?string $summary;
+	protected ?string $summary = null;
 
-	protected ?string $description;
+	protected ?string $description = null;
 
-	protected ?string $termsOfService;
+	protected ?string $termsOfService = null;
 
-	protected ?Contact $contact;
+	protected ?Contact $contact = null;
 
-	protected ?License $license;
+	protected ?License $license = null;
 
 	protected string $version;
 
@@ -33,10 +33,20 @@ class Info implements Marshallable
 		return $this;
 	}
 
+	public function getTitle(): string
+	{
+		return $this->title;
+	}
+
 	public function setSummary(?string $summary): self
 	{
 		$this->summary = $summary;
 		return $this;
+	}
+
+	public function getSummary(): ?string
+	{
+		return $this->summary;
 	}
 
 	public function setDescription(?string $description): self
@@ -45,10 +55,20 @@ class Info implements Marshallable
 		return $this;
 	}
 
+	public function getDescription(): ?string
+	{
+		return $this->description;
+	}
+
 	public function setTermsOfService(?string $termsOfService): self
 	{
 		$this->termsOfService = $termsOfService;
 		return $this;
+	}
+
+	public function getTermsOfService(): ?string
+	{
+		return $this->termsOfService;
 	}
 
 	public function setContact(?Contact $contact): self
@@ -57,15 +77,30 @@ class Info implements Marshallable
 		return $this;
 	}
 
+	public function getContact(): ?Contact
+	{
+		return $this->contact;
+	}
+
 	public function setLicense(?License $license): self
 	{
 		$this->license = $license;
 		return $this;
 	}
 
+	public function getLicense(): ?License
+	{
+		return $this->license;
+	}
+
 	public function setVersion(string $version): self
 	{
 		$this->version = $version;
 		return $this;
+	}
+
+	public function getVersion(): string
+	{
+		return $this->version;
 	}
 }

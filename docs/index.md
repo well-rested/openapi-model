@@ -3,6 +3,9 @@ hide:
   - toc
   - navigation
 ---
+
+![Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/well-rested/openapi-model/badges/.badges/main/coverage-badge.json)
+
 # Home
 
 This package aims to be an OOP representation of an Open API schema for php, to help build schemas programmatically. Take a look at the example below to get a quick idea of how this can be used to build API specs in PHP.
