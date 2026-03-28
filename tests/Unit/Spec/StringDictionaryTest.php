@@ -93,7 +93,7 @@ class StringDictionaryTest extends TestCase
 		$dict = new StringDictionary();
 
 		$this->assertEquals(
-			new stdClass,
+			new stdClass(),
 			$dict->toMarshallable($ctx),
 		);
 	}
