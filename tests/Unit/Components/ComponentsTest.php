@@ -20,8 +20,8 @@ use OpenApiSchema\Operations\RequestBodies;
 use OpenApiSchema\Operations\RequestBody;
 use OpenApiSchema\Operations\Response;
 use OpenApiSchema\Operations\Responses;
-use OpenApiSchema\Operations\Schema;
-use OpenApiSchema\Operations\Schemas;
+use OpenApiSchema\Schema\Schema;
+use OpenApiSchema\Schema\Schemas;
 use OpenApiSchema\Security\SecurityScheme;
 use OpenApiSchema\Security\SecuritySchemes;
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace OpenApiSchema\Operations;
+namespace OpenApiSchema\Schema;
 
 use OpenApiSchema\Utils\Marshallable;
 use OpenApiSchema\Utils\HasCustomAttributes;

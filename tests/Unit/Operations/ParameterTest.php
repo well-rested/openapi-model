@@ -6,7 +6,7 @@ namespace Tests\Unit\Operations;
 
 use PHPUnit\Framework\TestCase;
 use OpenApiSchema\Operations\Parameter;
-use OpenApiSchema\Operations\Schema;
+use OpenApiSchema\Schema\Schema;
 
 class ParameterTest extends TestCase
 {

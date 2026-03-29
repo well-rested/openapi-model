@@ -6,10 +6,10 @@ namespace OpenApiSchema\Components;
 
 use OpenApiSchema\Reference;
 use OpenApiSchema\Operations\Header;
-use OpenApiSchema\Operations\Schema;
+use OpenApiSchema\Schema\Schema;
+use OpenApiSchema\Schema\Schemas;
 use OpenApiSchema\Utils\Marshallable;
 use OpenApiSchema\Operations\Headers;
-use OpenApiSchema\Operations\Schemas;
 use OpenApiSchema\Operations\PathItem;
 use OpenApiSchema\Operations\Response;
 use OpenApiSchema\Operations\Parameter;

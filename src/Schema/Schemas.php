@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace OpenApiSchema\Operations;
+namespace OpenApiSchema\Schema;
 
-use OpenApiSchema\Utils\Collection;
+use OpenApiSchema\Utils\Dictionary;
 use OpenApiSchema\Utils\Marshallable;
 
 /**
- * @extends Collection<Schema>
+ * @extends Dictionary<Schema>
  */
-class PolymorphicSchemas extends Collection implements Marshallable
+class Schemas extends Dictionary implements Marshallable
 {
 	protected static function isType(mixed $value): bool
 	{

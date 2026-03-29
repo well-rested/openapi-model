@@ -11,7 +11,7 @@ use OpenApiSchema\Meta\Contact;
 use OpenApiSchema\Meta\License;
 use PHPUnit\Framework\TestCase;
 use OpenApiSchema\Server\Server;
-use OpenApiSchema\Operations\Schema;
+use OpenApiSchema\Schema\Schema;
 use OpenApiSchema\Security\OAuthFlow;
 use OpenApiSchema\Operations\PathItem;
 use OpenApiSchema\Operations\Response;

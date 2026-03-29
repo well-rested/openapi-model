@@ -6,7 +6,7 @@ namespace Tests\Unit\Operations;
 
 use PHPUnit\Framework\TestCase;
 use OpenApiSchema\Operations\MediaType;
-use OpenApiSchema\Operations\Schema;
+use OpenApiSchema\Schema\Schema;
 use OpenApiSchema\Operations\Encoding;
 
 class MediaTypeTest extends TestCase

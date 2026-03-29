@@ -41,7 +41,7 @@ class VeryBasicTest extends TestCase
 									->setRequired(true)
 									->setIn("path")
 									->setSchema(
-										(new OA\Operations\Schema())->setType("integer"),
+										(new OA\Schema\Schema())->setType("integer"),
 									),
 							)
 							->addResponse(
@@ -52,14 +52,14 @@ class VeryBasicTest extends TestCase
 										"application/json",
 										(new OA\Operations\MediaType())
 											->setSchema(
-												(new OA\Operations\Schema())
+												(new OA\Schema\Schema())
 													->addProperty(
 														"id",
-														(new OA\Operations\Schema())->setType("integer"),
+														(new OA\Schema\Schema())->setType("integer"),
 													)
 													->addProperty(
 														"name",
-														(new OA\Operations\Schema())->setType("string"),
+														(new OA\Schema\Schema())->setType("string"),
 													),
 											),
 									),
@@ -73,10 +73,10 @@ class VeryBasicTest extends TestCase
 										"application/json",
 										(new OA\Operations\MediaType())
 											->setSchema(
-												(new OA\Operations\Schema())
+												(new OA\Schema\Schema())
 													->addProperty(
 														"name",
-														(new OA\Operations\Schema())->setType("string"),
+														(new OA\Schema\Schema())->setType("string"),
 													),
 											),
 									),
@@ -115,13 +115,13 @@ class VeryBasicTest extends TestCase
 								->setIn("query") // JSON path `.paths[/api/v1/users].get.parameters[0].in`
 								->setName("page") // JSON path `.paths[/api/v1/users].get.parameters[0].name`
 								->setSchema( // JSON path `.paths[/api/v1/users].get.parameters[0].schema`
-									(new OA\Operations\Schema())->setType("integer"), // JSON path `.paths[/api/v1/users].get.parameters[0].schema.type`
+									(new OA\Schema\Schema())->setType("integer"), // JSON path `.paths[/api/v1/users].get.parameters[0].schema.type`
 								),
 							(new OA\Operations\Parameter()) // JSON path `.paths[/api/v1/users].get.parameters[1]`
 								->setIn("query")  // JSON path `.paths[/api/v1/users].get.parameters[1].in`
 								->setName("page_size") // JSON path `.paths[/api/v1/users].get.parameters[1].name`
 								->setSchema(  // JSON path `.paths[/api/v1/users].get.parameters[1].schema`
-									(new OA\Operations\Schema())->setType("integer"),  // JSON path `.paths[/api/v1/users].get.parameters[1].schema.type`
+									(new OA\Schema\Schema())->setType("integer"),  // JSON path `.paths[/api/v1/users].get.parameters[1].schema.type`
 								),
 						)
 						->addResponse(
@@ -137,22 +137,22 @@ class VeryBasicTest extends TestCase
 									"application/json", // JSON path `.paths[/api/v1/users].get.responses[200].content[application/json]`
 									(new OA\Operations\MediaType())
 										->setSchema( // JSON path `.paths[/api/v1/users].get.responses[200].content[application/json].schema`
-											(new OA\Operations\Schema())
+											(new OA\Schema\Schema())
 												->setItems( // JSON path `.paths[/api/v1/users].get.responses[200].content[application/json].schema.items`
-													(new OA\Operations\Schema())
+													(new OA\Schema\Schema())
 														->addProperty(
 															"id", // JSON path `.paths[/api/v1/users].get.responses[200].content[application/json].schema.items.properties.id`
-															(new OA\Operations\Schema())
+															(new OA\Schema\Schema())
 																->setType("integer"), // JSON path `.paths[/api/v1/users].get.responses[200].content[application/json].schema.items.properties.id.type`
 														)
 														->addProperty(
 															"name", // JSON path `.paths[/api/v1/users].get.responses[200].content[application/json].schema.items.properties.name`
-															(new OA\Operations\Schema())
+															(new OA\Schema\Schema())
 																->setType("string"), // JSON path `.paths[/api/v1/users].get.responses[200].content[application/json].schema.items.properties.name.type`
 														)
 														->addProperty(
 															"email",  // JSON path `.paths[/api/v1/users].get.responses[200].content[application/json].schema.items.properties.email`
-															(new OA\Operations\Schema())
+															(new OA\Schema\Schema())
 																->setType("string"),  // JSON path `.paths[/api/v1/users].get.responses[200].content[application/json].schema.items.properties.email.type`
 														),
 												),
@@ -167,21 +167,21 @@ class VeryBasicTest extends TestCase
 			(new OA\Components\Components())
 				->addSchema(
 					"user",  // JSON path `.components.schemas.user`
-					(new OA\Operations\Schema())
+					(new OA\Schema\Schema())
 						->addProperty(
 							"id",  // JSON path `.components.schemas.user.properties.id`
-							(new OA\Operations\Schema())
+							(new OA\Schema\Schema())
 								->setType("integer") // JSON path `.components.schemas.user.properties.id.type`
 								->setExclusiveMinimum(0), // JSON path `.components.schemas.user.properties.id.exclusiveMinimum`
 						)
 						->addProperty(
 							"name", // JSON path `.components.schemas.user.properties.name`
-							(new OA\Operations\Schema())
+							(new OA\Schema\Schema())
 								->setType("string"), // JSON path `.components.schemas.user.properties.name.type`
 						)
 						->addProperty(
 							"email", // JSON path `.components.schemas.user.properties.email`
-							(new OA\Operations\Schema())
+							(new OA\Schema\Schema())
 								->setType("string"), // JSON path `.components.schemas.user.properties.email.type`
 						),
 				),
@@ -197,7 +197,7 @@ class VeryBasicTest extends TestCase
 						->setIn("path") // JSON path `.paths[/api/v1/users/{id}].parameters[0].in`
 						->setRequired(true) // JSON path `.paths[/api/v1/users/{id}].parameters[0].required`
 						->setSchema(
-							(new OA\Operations\Schema()) // JSON path `.paths[/api/v1/users/{id}].parameters[0].schema`
+							(new OA\Schema\Schema()) // JSON path `.paths[/api/v1/users/{id}].parameters[0].schema`
 								->setType("integer"), // JSON path `.paths[/api/v1/users/{id}].parameters[0].schema.type`
 						),
 				)
@@ -212,7 +212,7 @@ class VeryBasicTest extends TestCase
 									"application/json",  // JSON path `.paths[/api/v1/users/{id}].get.responses[200].content[application/json]`
 									(new OA\Operations\MediaType())
 										->setSchema(
-											(new OA\Operations\Schema()) // JSON path `.paths[/api/v1/users/{id}].get.responses[200].content[application/json].schema`
+											(new OA\Schema\Schema()) // JSON path `.paths[/api/v1/users/{id}].get.responses[200].content[application/json].schema`
 												->setRef("#/components/schemas/user"), // JSON path `.paths[/api/v1/users/{id}].get.responses[200].content[application/json].schema.$ref`
 										),
 								),
@@ -227,15 +227,15 @@ class VeryBasicTest extends TestCase
 									"application/json", // JSON path `.paths[/api/v1/users/{id}].put.requestBody.content[application/json]`
 									(new OA\Operations\MediaType())
 										->setSchema(
-											(new OA\Operations\Schema())  // JSON path `.paths[/api/v1/users/{id}].put.requestBody.content[application/json].schema`
+											(new OA\Schema\Schema())  // JSON path `.paths[/api/v1/users/{id}].put.requestBody.content[application/json].schema`
 												->addProperty(
 													"name",  // JSON path `.paths[/api/v1/users/{id}].put.requestBody.content[application/json].schema.properties.name`
-													(new OA\Operations\Schema())
+													(new OA\Schema\Schema())
 														->setType("string"), // JSON path `.paths[/api/v1/users/{id}].put.requestBody.content[application/json].schema.properties.name.type`
 												)
 												->addProperty(
 													"email", // JSON path `.paths[/api/v1/users/{id}].put.requestBody.content[application/json].schema.properties.email`
-													(new OA\Operations\Schema())
+													(new OA\Schema\Schema())
 														->setType("string"), // JSON path `.paths[/api/v1/users/{id}].put.requestBody.content[application/json].schema.properties.email.type`
 												),
 										),
@@ -249,7 +249,7 @@ class VeryBasicTest extends TestCase
 									"application/json",  // JSON path `.paths[/api/v1/users/{id}].put.responses[200].content[application/json]`
 									(new OA\Operations\MediaType())
 										->setSchema(
-											(new OA\Operations\Schema()) // JSON path `.paths[/api/v1/users/{id}].put.responses[200].content[application/json].schema`
+											(new OA\Schema\Schema()) // JSON path `.paths[/api/v1/users/{id}].put.responses[200].content[application/json].schema`
 												->setRef("#/components/schemas/user"), // JSON path `.paths[/api/v1/users/{id}].put.responses[200].content[application/json].schema.$ref`
 										),
 								),
