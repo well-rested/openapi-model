@@ -6,7 +6,7 @@ namespace Tests\Unit\Operations;
 
 use PHPUnit\Framework\TestCase;
 use OpenApiSchema\Operations\Header;
-use OpenApiSchema\Operations\Schema;
+use OpenApiSchema\Schema\Schema;
 use OpenApiSchema\Operations\Content;
 
 class HeaderTest extends TestCase

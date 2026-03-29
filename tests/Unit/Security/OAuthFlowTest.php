@@ -6,7 +6,7 @@ namespace Tests\Unit\Security;
 
 use PHPUnit\Framework\TestCase;
 use OpenApiSchema\Security\OAuthFlow;
-use OpenApiSchema\Spec\StringDictionary;
+use OpenApiSchema\Utils\StringDictionary;
 
 class OAuthFlowTest extends TestCase
 {

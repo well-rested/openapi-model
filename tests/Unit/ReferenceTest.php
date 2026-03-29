@@ -6,8 +6,8 @@ namespace Tests\Unit\Spec;
 
 use OpenApiSchema\Reference;
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Spec\Marshallable;
-use OpenApiSchema\Spec\MarshallingContext;
+use OpenApiSchema\Utils\Marshallable;
+use OpenApiSchema\Utils\MarshallingContext;
 
 class ReferenceTest extends TestCase
 {

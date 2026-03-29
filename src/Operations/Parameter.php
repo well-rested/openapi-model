@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace OpenApiSchema\Operations;
 
-use OpenApiSchema\Spec\Marshallable;
-use OpenApiSchema\Spec\HasCustomAttributes;
-use OpenApiSchema\Spec\ConvertsSelfToMarshallable;
+use OpenApiSchema\Schema\Schema;
+use OpenApiSchema\Utils\ConvertsSelfToMarshallable;
+use OpenApiSchema\Utils\HasCustomAttributes;
+use OpenApiSchema\Utils\Marshallable;
 
 class Parameter implements Marshallable
 {
@@ -15,8 +16,7 @@ class Parameter implements Marshallable
 
 	protected string $name;
 
-	// TODO: enum for this (query, header, path, cookie)
-	protected string $in;
+	protected ParameterLocation $in;
 
 	protected ?string $description = null;
 
@@ -41,13 +41,13 @@ class Parameter implements Marshallable
 		return $this->name;
 	}
 
-	public function setIn(string $in): self
+	public function setIn(ParameterLocation $in): self
 	{
 		$this->in = $in;
 		return $this;
 	}
 
-	public function getIn(): string
+	public function getIn(): ParameterLocation
 	{
 		return $this->in;
 	}
@@ -83,20 +83,6 @@ class Parameter implements Marshallable
 	public function getAllowsEmptyValue(): ?bool
 	{
 		return $this->allowEmptyValue;
-	}
-
-	/** @deprecated use setAllowsEmptyValue */
-	public function allowsEmptyValue(): self
-	{
-		$this->allowEmptyValue = true;
-		return $this;
-	}
-
-	/** @deprecated use setAllowsEmptyValue */
-	public function doesNotAllowEmptyValue(): self
-	{
-		$this->allowEmptyValue = false;
-		return $this;
 	}
 
 	public function setSchema(Schema $schema): self

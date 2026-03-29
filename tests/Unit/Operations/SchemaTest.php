@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Tests\Unit\Operations;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Operations\Schema;
-use OpenApiSchema\Operations\Schemas;
-use OpenApiSchema\Operations\PolymorphicSchemas;
+use OpenApiSchema\Schema\Schema;
+use OpenApiSchema\Schema\Schemas;
+use OpenApiSchema\Schema\PolymorphicSchemas;
 
 class SchemaTest extends TestCase
 {

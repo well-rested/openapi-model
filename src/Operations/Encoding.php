@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace OpenApiSchema\Operations;
 
 use OpenApiSchema\Reference;
-use OpenApiSchema\Spec\Marshallable;
-use OpenApiSchema\Spec\HasCustomAttributes;
-use OpenApiSchema\Spec\ConvertsSelfToMarshallable;
+use OpenApiSchema\Utils\Marshallable;
+use OpenApiSchema\Utils\HasCustomAttributes;
+use OpenApiSchema\Utils\ConvertsSelfToMarshallable;
 
 class Encoding implements Marshallable
 {
@@ -18,7 +18,6 @@ class Encoding implements Marshallable
 
 	protected Headers $headers;
 
-	// TODO make this an enum ("form","spaceDelimited","pipeDelimited","deepObject")
 	protected ?string $style = null;
 
 	protected ?bool $explode = null;

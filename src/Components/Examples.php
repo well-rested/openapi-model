@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace OpenApiSchema\Components;
 
-use OpenApiSchema\Spec\Dictionary;
+use OpenApiSchema\Utils\Dictionary;
 use OpenApiSchema\Reference;
-use OpenApiSchema\Spec\Marshallable;
+use OpenApiSchema\Utils\Marshallable;
 
 /**
  * @extends Dictionary<Example|Reference>

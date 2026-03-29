@@ -10,16 +10,16 @@ use OpenApiSchema\Meta\Info;
 use OpenApiSchema\Meta\Tags;
 use OpenApiSchema\Server\Server;
 use OpenApiSchema\Server\Servers;
-use OpenApiSchema\Spec\Marshallable;
+use OpenApiSchema\Utils\Marshallable;
 use OpenApiSchema\Operations\PathItem;
 use OpenApiSchema\Operations\PathItems;
 use OpenApiSchema\Components\Components;
-use OpenApiSchema\Spec\MarshallingContext;
-use OpenApiSchema\Spec\HasCustomAttributes;
+use OpenApiSchema\Utils\MarshallingContext;
+use OpenApiSchema\Utils\HasCustomAttributes;
 use OpenApiSchema\Meta\ExternalDocumentation;
 use OpenApiSchema\Security\SecurityRequirement;
 use OpenApiSchema\Security\SecurityRequirements;
-use OpenApiSchema\Spec\ConvertsSelfToMarshallable;
+use OpenApiSchema\Utils\ConvertsSelfToMarshallable;
 
 class Document implements Marshallable
 {

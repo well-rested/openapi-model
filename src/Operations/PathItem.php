@@ -7,9 +7,9 @@ namespace OpenApiSchema\Operations;
 use OpenApiSchema\Reference;
 use OpenApiSchema\Server\Server;
 use OpenApiSchema\Server\Servers;
-use OpenApiSchema\Spec\Marshallable;
-use OpenApiSchema\Spec\HasCustomAttributes;
-use OpenApiSchema\Spec\ConvertsSelfToMarshallable;
+use OpenApiSchema\Utils\Marshallable;
+use OpenApiSchema\Utils\HasCustomAttributes;
+use OpenApiSchema\Utils\ConvertsSelfToMarshallable;
 
 class PathItem implements Marshallable
 {

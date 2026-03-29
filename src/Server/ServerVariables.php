@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace OpenApiSchema\Server;
 
-use OpenApiSchema\Spec\Dictionary;
-use OpenApiSchema\Spec\Marshallable;
+use OpenApiSchema\Utils\Dictionary;
+use OpenApiSchema\Utils\Marshallable;
 
 /**
  * @extends Dictionary<ServerVariable>
