@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Spec;
+namespace Tests\Unit\Utils;
 
 use Generator;
 use InvalidArgumentException;
-use OpenApiSchema\Spec\MarshallingContext;
-use OpenApiSchema\Spec\StringDictionary;
+use OpenApiSchema\Utils\MarshallingContext;
+use OpenApiSchema\Utils\StringDictionary;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use stdClass;

@@ -7,7 +7,7 @@ namespace OpenApiSchema\Components;
 use OpenApiSchema\Reference;
 use OpenApiSchema\Operations\Header;
 use OpenApiSchema\Operations\Schema;
-use OpenApiSchema\Spec\Marshallable;
+use OpenApiSchema\Utils\Marshallable;
 use OpenApiSchema\Operations\Headers;
 use OpenApiSchema\Operations\Schemas;
 use OpenApiSchema\Operations\PathItem;
@@ -20,8 +20,8 @@ use OpenApiSchema\Operations\RequestBody;
 use OpenApiSchema\Security\SecurityScheme;
 use OpenApiSchema\Operations\RequestBodies;
 use OpenApiSchema\Security\SecuritySchemes;
-use OpenApiSchema\Spec\HasCustomAttributes;
-use OpenApiSchema\Spec\ConvertsSelfToMarshallable;
+use OpenApiSchema\Utils\HasCustomAttributes;
+use OpenApiSchema\Utils\ConvertsSelfToMarshallable;
 
 class Components implements Marshallable
 {

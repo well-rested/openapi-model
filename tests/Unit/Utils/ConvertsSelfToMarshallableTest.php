@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Spec;
+namespace Tests\Unit\Utils;
 
 use stdClass;
 use Generator;
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Spec\Collection;
-use OpenApiSchema\Spec\Dictionary;
-use OpenApiSchema\Spec\MarshallingContext;
-use Tests\Unit\Spec\Stubs\MarshallableBase;
-use OpenApiSchema\Spec\CustomAttributeDictionary;
+use OpenApiSchema\Utils\Collection;
+use OpenApiSchema\Utils\Dictionary;
+use OpenApiSchema\Utils\MarshallingContext;
+use Tests\Unit\Utils\Stubs\MarshallableBase;
+use OpenApiSchema\Utils\CustomAttributeDictionary;
 use PHPUnit\Framework\Attributes\DataProvider;
-use Tests\Unit\Spec\Stubs\MarshallableArrayWhenEmpty;
-use Tests\Unit\Spec\Stubs\MarshallableRetainEmptyArrays;
-use Tests\Unit\Spec\Stubs\MarshallableWithCustomAttributes;
-use Tests\Unit\Spec\Stubs\MarshallableRetainEmptyCollections;
+use Tests\Unit\Utils\Stubs\MarshallableArrayWhenEmpty;
+use Tests\Unit\Utils\Stubs\MarshallableRetainEmptyArrays;
+use Tests\Unit\Utils\Stubs\MarshallableWithCustomAttributes;
+use Tests\Unit\Utils\Stubs\MarshallableRetainEmptyCollections;
 
 class ConvertsSelfToMarshallableTest extends TestCase
 {

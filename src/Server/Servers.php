@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace OpenApiSchema\Server;
 
-use OpenApiSchema\Spec\Marshallable;
-use OpenApiSchema\Spec\Collection;
+use OpenApiSchema\Utils\Marshallable;
+use OpenApiSchema\Utils\Collection;
 
 /**
  * @extends Collection<Server>

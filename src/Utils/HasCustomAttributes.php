@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace OpenApiSchema\Spec;
+namespace OpenApiSchema\Utils;
 
 trait HasCustomAttributes
 {

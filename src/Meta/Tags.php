@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace OpenApiSchema\Meta;
 
-use OpenApiSchema\Spec\Collection;
-use OpenApiSchema\Spec\Marshallable;
+use OpenApiSchema\Utils\Collection;
+use OpenApiSchema\Utils\Marshallable;
 
 /**
  * @extends Collection<Tag>

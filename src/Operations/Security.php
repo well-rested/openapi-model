@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace OpenApiSchema\Operations;
 
-use OpenApiSchema\Spec\Collection;
+use OpenApiSchema\Utils\Collection;
 use OpenApiSchema\Security\SecurityRequirements;
-use OpenApiSchema\Spec\Marshallable;
+use OpenApiSchema\Utils\Marshallable;
 
 /**
  * @extends Collection<SecurityRequirements>

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Spec\Stubs;
+namespace Tests\Unit\Utils\Stubs;
 
-use OpenApiSchema\Spec\HasCustomAttributes;
-use OpenApiSchema\Spec\CustomAttributeDictionary;
+use OpenApiSchema\Utils\HasCustomAttributes;
+use OpenApiSchema\Utils\CustomAttributeDictionary;
 
 class HasCustomAttributesStub
 {

@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace OpenApiSchema\Operations;
 
 use OpenApiSchema\Reference;
-use OpenApiSchema\Spec\Collection;
-use OpenApiSchema\Spec\Marshallable;
+use OpenApiSchema\Utils\Collection;
+use OpenApiSchema\Utils\Marshallable;
 
 /**
  * @extends Collection<Header|Reference>

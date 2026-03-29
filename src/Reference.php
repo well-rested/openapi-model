@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace OpenApiSchema;
 
-use OpenApiSchema\Spec\Marshallable;
-use OpenApiSchema\Spec\ConvertsSelfToMarshallable;
+use OpenApiSchema\Utils\Marshallable;
+use OpenApiSchema\Utils\ConvertsSelfToMarshallable;
 
 class Reference implements Marshallable
 {

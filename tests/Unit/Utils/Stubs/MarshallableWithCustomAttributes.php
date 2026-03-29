@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Spec\Stubs;
+namespace Tests\Unit\Utils\Stubs;
 
-use OpenApiSchema\Spec\CustomAttributeDictionary;
-use OpenApiSchema\Spec\ConvertsSelfToMarshallable;
+use OpenApiSchema\Utils\CustomAttributeDictionary;
+use OpenApiSchema\Utils\ConvertsSelfToMarshallable;
 
 class MarshallableWithCustomAttributes
 {

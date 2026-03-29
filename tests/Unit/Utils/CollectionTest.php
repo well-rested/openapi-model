@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Spec;
+namespace Tests\Unit\Utils;
 
 use Generator;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\Attributes\DataProvider;
-use OpenApiSchema\Spec\MarshallingContext;
-use Tests\Unit\Spec\Stubs\StringCollection;
+use OpenApiSchema\Utils\MarshallingContext;
+use Tests\Unit\Utils\Stubs\StringCollection;
 
 class CollectionTest extends TestCase
 {

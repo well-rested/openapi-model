@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Spec;
+namespace Tests\Unit\Utils;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Spec\CustomAttributeDictionary;
-use Tests\Unit\Spec\Stubs\HasCustomAttributesStub;
+use OpenApiSchema\Utils\CustomAttributeDictionary;
+use Tests\Unit\Utils\Stubs\HasCustomAttributesStub;
 
 class HasCustomAttributesTest extends TestCase
 {

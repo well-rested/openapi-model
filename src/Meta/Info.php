@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace OpenApiSchema\Meta;
 
-use OpenApiSchema\Spec\HasCustomAttributes;
-use OpenApiSchema\Spec\Marshallable;
-use OpenApiSchema\Spec\ConvertsSelfToMarshallable;
+use OpenApiSchema\Utils\HasCustomAttributes;
+use OpenApiSchema\Utils\Marshallable;
+use OpenApiSchema\Utils\ConvertsSelfToMarshallable;
 
 class Info implements Marshallable
 {

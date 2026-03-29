@@ -15,7 +15,7 @@ use OpenApiSchema\Server\Servers;
 use OpenApiSchema\Operations\PathItem;
 use OpenApiSchema\Operations\PathItems;
 use OpenApiSchema\Components\Components;
-use OpenApiSchema\Spec\MarshallingContext;
+use OpenApiSchema\Utils\MarshallingContext;
 use OpenApiSchema\Meta\ExternalDocumentation;
 use OpenApiSchema\Security\SecurityRequirement;
 use OpenApiSchema\Security\SecurityRequirements;

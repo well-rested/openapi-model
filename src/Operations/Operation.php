@@ -7,11 +7,11 @@ namespace OpenApiSchema\Operations;
 use OpenApiSchema\Reference;
 use OpenApiSchema\Server\Server;
 use OpenApiSchema\Server\Servers;
-use OpenApiSchema\Spec\Marshallable;
-use OpenApiSchema\Spec\HasCustomAttributes;
+use OpenApiSchema\Utils\Marshallable;
+use OpenApiSchema\Utils\HasCustomAttributes;
 use OpenApiSchema\Meta\ExternalDocumentation;
 use OpenApiSchema\Security\SecurityRequirements;
-use OpenApiSchema\Spec\ConvertsSelfToMarshallable;
+use OpenApiSchema\Utils\ConvertsSelfToMarshallable;
 
 class Operation implements Marshallable
 {

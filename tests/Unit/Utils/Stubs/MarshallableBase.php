@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Spec\Stubs;
+namespace Tests\Unit\Utils\Stubs;
 
-use OpenApiSchema\Spec\Collection;
-use OpenApiSchema\Spec\Dictionary;
-use OpenApiSchema\Spec\ConvertsSelfToMarshallable;
+use OpenApiSchema\Utils\Collection;
+use OpenApiSchema\Utils\Dictionary;
+use OpenApiSchema\Utils\ConvertsSelfToMarshallable;
 
 class MarshallableBase
 {

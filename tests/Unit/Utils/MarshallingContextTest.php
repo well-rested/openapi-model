@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Spec;
+namespace Tests\Unit\Utils;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Spec\MarshallingContext;
+use OpenApiSchema\Utils\MarshallingContext;
 
 class MarshallingContextTest extends TestCase
 {

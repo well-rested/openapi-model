@@ -86,7 +86,7 @@ class VeryBasicTest extends TestCase
 
 		$this->assertJsonStringEqualsJsonFile(
 			__DIR__ . '/examples/very_basic.json',
-			$doc->toJson(new OA\Spec\MarshallingContext()),
+			$doc->toJson(new OA\Utils\MarshallingContext()),
 		);
 	}
 
@@ -266,10 +266,10 @@ class VeryBasicTest extends TestCase
 				),
 		);
 
-		$jsonSpec = $doc->toJson(new OA\Spec\MarshallingContext());
+		$jsonSpec = $doc->toJson(new OA\Utils\MarshallingContext());
 		$this->assertJsonStringEqualsJsonFile(
 			__DIR__ . '/examples/user_guide.json',
-			$doc->toJson(new OA\Spec\MarshallingContext()),
+			$doc->toJson(new OA\Utils\MarshallingContext()),
 		);
 	}
 }

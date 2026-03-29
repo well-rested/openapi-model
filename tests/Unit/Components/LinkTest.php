@@ -7,9 +7,9 @@ namespace Tests\Unit\Spec;
 use PHPUnit\Framework\TestCase;
 use OpenApiSchema\Server\Server;
 use OpenApiSchema\Components\Link;
-use OpenApiSchema\Spec\Marshallable;
-use OpenApiSchema\Spec\StringDictionary;
-use OpenApiSchema\Spec\MarshallingContext;
+use OpenApiSchema\Utils\Marshallable;
+use OpenApiSchema\Utils\StringDictionary;
+use OpenApiSchema\Utils\MarshallingContext;
 use PHPUnit\Framework\MockObject\MockObject;
 
 class LinkTest extends TestCase

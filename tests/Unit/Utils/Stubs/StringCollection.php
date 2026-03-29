@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Spec\Stubs;
+namespace Tests\Unit\Utils\Stubs;
 
-use OpenApiSchema\Spec\Collection;
+use OpenApiSchema\Utils\Collection;
 
 /**
  * @extends Collection<string>

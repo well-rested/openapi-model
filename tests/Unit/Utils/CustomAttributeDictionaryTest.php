@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Spec;
+namespace Tests\Unit\Utils;
 
 use Generator;
 use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\Attributes\DataProvider;
-use OpenApiSchema\Spec\CustomAttributeDictionary;
+use OpenApiSchema\Utils\CustomAttributeDictionary;
 
 class CustomAttributeDictionaryTest extends TestCase
 {

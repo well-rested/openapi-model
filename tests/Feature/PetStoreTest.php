@@ -20,7 +20,7 @@ use OpenApiSchema\Operations\MediaType;
 use OpenApiSchema\Operations\Operation;
 use OpenApiSchema\Operations\Parameter;
 use OpenApiSchema\Components\Components;
-use OpenApiSchema\Spec\MarshallingContext;
+use OpenApiSchema\Utils\MarshallingContext;
 use OpenApiSchema\Operations\RequestBody;
 use OpenApiSchema\Security\SecurityScheme;
 use OpenApiSchema\Meta\ExternalDocumentation;
