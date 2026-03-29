@@ -4,8 +4,9 @@ declare(strict_types=1);
 
 namespace Tests\Feature;
 
-use PHPUnit\Framework\TestCase;
 use OpenApiSchema as OA;
+use OpenApiSchema\Operations\ParameterLocation;
+use PHPUnit\Framework\TestCase;
 
 class VeryBasicTest extends TestCase
 {
@@ -39,7 +40,7 @@ class VeryBasicTest extends TestCase
 								(new OA\Operations\Parameter())
 									->setName("id")
 									->setRequired(true)
-									->setIn("path")
+									->setIn(ParameterLocation::Path)
 									->setSchema(
 										(new OA\Schema\Schema())->setType("integer"),
 									),
@@ -112,13 +113,13 @@ class VeryBasicTest extends TestCase
 						->setSummary("list users") // JSON path `.paths[/api/v1/users].get.summary`
 						->addParameters(
 							(new OA\Operations\Parameter()) // JSON path `.paths[/api/v1/users].get.parameters[0]`
-								->setIn("query") // JSON path `.paths[/api/v1/users].get.parameters[0].in`
+								->setIn(ParameterLocation::Query) // JSON path `.paths[/api/v1/users].get.parameters[0].in`
 								->setName("page") // JSON path `.paths[/api/v1/users].get.parameters[0].name`
 								->setSchema( // JSON path `.paths[/api/v1/users].get.parameters[0].schema`
 									(new OA\Schema\Schema())->setType("integer"), // JSON path `.paths[/api/v1/users].get.parameters[0].schema.type`
 								),
 							(new OA\Operations\Parameter()) // JSON path `.paths[/api/v1/users].get.parameters[1]`
-								->setIn("query")  // JSON path `.paths[/api/v1/users].get.parameters[1].in`
+								->setIn(ParameterLocation::Query)  // JSON path `.paths[/api/v1/users].get.parameters[1].in`
 								->setName("page_size") // JSON path `.paths[/api/v1/users].get.parameters[1].name`
 								->setSchema(  // JSON path `.paths[/api/v1/users].get.parameters[1].schema`
 									(new OA\Schema\Schema())->setType("integer"),  // JSON path `.paths[/api/v1/users].get.parameters[1].schema.type`
@@ -194,7 +195,7 @@ class VeryBasicTest extends TestCase
 				->addParameters(
 					(new OA\Operations\Parameter()) // JSON path `.paths[/api/v1/users/{id}].parameters[0]`
 						->setName("id") // JSON path `.paths[/api/v1/users/{id}].parameters[0].name`
-						->setIn("path") // JSON path `.paths[/api/v1/users/{id}].parameters[0].in`
+						->setIn(ParameterLocation::Path) // JSON path `.paths[/api/v1/users/{id}].parameters[0].in`
 						->setRequired(true) // JSON path `.paths[/api/v1/users/{id}].parameters[0].required`
 						->setSchema(
 							(new OA\Schema\Schema()) // JSON path `.paths[/api/v1/users/{id}].parameters[0].schema`

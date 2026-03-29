@@ -4,28 +4,30 @@ declare(strict_types=1);
 
 namespace Tests\Feature;
 
+use OpenApiSchema\Components\Components;
 use OpenApiSchema\Document;
-use OpenApiSchema\Meta\Tag;
-use OpenApiSchema\Meta\Info;
 use OpenApiSchema\Meta\Contact;
+use OpenApiSchema\Meta\ExternalDocumentation;
+use OpenApiSchema\Meta\Info;
 use OpenApiSchema\Meta\License;
-use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Server\Server;
-use OpenApiSchema\Schema\Schema;
-use OpenApiSchema\Security\OAuthFlow;
-use OpenApiSchema\Operations\PathItem;
-use OpenApiSchema\Operations\Response;
-use OpenApiSchema\Security\OAuthFlows;
+use OpenApiSchema\Meta\Tag;
 use OpenApiSchema\Operations\MediaType;
 use OpenApiSchema\Operations\Operation;
 use OpenApiSchema\Operations\Parameter;
-use OpenApiSchema\Components\Components;
-use OpenApiSchema\Utils\MarshallingContext;
+use OpenApiSchema\Operations\ParameterLocation;
+use OpenApiSchema\Operations\PathItem;
 use OpenApiSchema\Operations\RequestBody;
-use OpenApiSchema\Security\SecurityScheme;
-use OpenApiSchema\Meta\ExternalDocumentation;
+use OpenApiSchema\Operations\Response;
+use OpenApiSchema\Security\SecuritySchemeLocation;
+use OpenApiSchema\Schema\Schema;
+use OpenApiSchema\Security\OAuthFlow;
+use OpenApiSchema\Security\OAuthFlows;
 use OpenApiSchema\Security\SecurityRequirement;
 use OpenApiSchema\Security\SecurityRequirements;
+use OpenApiSchema\Security\SecurityScheme;
+use OpenApiSchema\Server\Server;
+use OpenApiSchema\Utils\MarshallingContext;
+use PHPUnit\Framework\TestCase;
 
 class PetStoreTest extends TestCase
 {
@@ -240,7 +242,7 @@ class PetStoreTest extends TestCase
 				->addParameters(
 					(new Parameter())
 						->setName("petId")
-						->setIn("path")
+						->setIn(ParameterLocation::Path)
 						->setDescription("ID of pet that needs to be fetched")
 						->setRequired(true)
 						->setSchema(
@@ -488,7 +490,7 @@ class PetStoreTest extends TestCase
 					(new SecurityScheme())
 						->setType("apiKey")
 						->setName("api_key")
-						->setIn("header"),
+						->setIn(SecuritySchemeLocation::Header),
 				),
 		);
 		$doc->addWebhook(

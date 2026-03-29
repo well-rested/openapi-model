@@ -7,6 +7,7 @@ namespace Tests\Unit\Security;
 use PHPUnit\Framework\TestCase;
 use OpenApiSchema\Security\SecurityScheme;
 use OpenApiSchema\Security\OAuthFlows;
+use OpenApiSchema\Security\SecuritySchemeLocation;
 
 class SecuritySchemeTest extends TestCase
 {
@@ -45,8 +46,8 @@ class SecuritySchemeTest extends TestCase
 		$scheme->setName(null);
 		$this->assertNull($scheme->getName());
 
-		$scheme->setIn('header');
-		$this->assertEquals('header', $scheme->getIn());
+		$scheme->setIn(SecuritySchemeLocation::Header);
+		$this->assertEquals(SecuritySchemeLocation::Header, $scheme->getIn());
 
 		$scheme->setIn(null);
 		$this->assertNull($scheme->getIn());

@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Operations;
 
-use PHPUnit\Framework\TestCase;
 use OpenApiSchema\Operations\Parameter;
+use OpenApiSchema\Operations\ParameterLocation;
 use OpenApiSchema\Schema\Schema;
+use PHPUnit\Framework\TestCase;
 
 class ParameterTest extends TestCase
 {
@@ -28,8 +29,8 @@ class ParameterTest extends TestCase
 		$parameter->setName('petId');
 		$this->assertEquals('petId', $parameter->getName());
 
-		$parameter->setIn('path');
-		$this->assertEquals('path', $parameter->getIn());
+		$parameter->setIn(ParameterLocation::Path);
+		$this->assertEquals(ParameterLocation::Path, $parameter->getIn());
 
 		$parameter->setDescription('The pet identifier');
 		$this->assertEquals('The pet identifier', $parameter->getDescription());

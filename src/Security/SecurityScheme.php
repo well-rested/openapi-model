@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace OpenApiSchema\Security;
 
-use OpenApiSchema\Utils\Marshallable;
-use OpenApiSchema\Utils\HasCustomAttributes;
 use OpenApiSchema\Utils\ConvertsSelfToMarshallable;
+use OpenApiSchema\Utils\HasCustomAttributes;
+use OpenApiSchema\Utils\Marshallable;
 
 class SecurityScheme implements Marshallable
 {
@@ -19,8 +19,7 @@ class SecurityScheme implements Marshallable
 
 	protected ?string $name = null;
 
-	//TODO: enum (query,header,cookie)
-	protected ?string $in = null;
+	protected ?SecuritySchemeLocation $in = null;
 
 	protected ?string $scheme = null;
 
@@ -63,13 +62,13 @@ class SecurityScheme implements Marshallable
 		return $this->name;
 	}
 
-	public function setIn(?string $in): self
+	public function setIn(?SecuritySchemeLocation $in): self
 	{
 		$this->in = $in;
 		return $this;
 	}
 
-	public function getIn(): ?string
+	public function getIn(): ?SecuritySchemeLocation
 	{
 		return $this->in;
 	}
