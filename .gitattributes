@@ -13,3 +13,9 @@
 /phpstan.neon export-ignore
 /phpunit.xml export-ignore
 /README.md export-ignore
+/.devcontainer export-ignore
+/.githooks export-ignore
+/commitlint.config.js export-ignore
+/package.json export-ignore
+/package-lock.json export-ignore
+/phpunit.xml.dist export-ignore
