@@ -18,7 +18,6 @@ class Encoding implements Marshallable
 
 	protected Headers $headers;
 
-	// TODO make this an enum ("form","spaceDelimited","pipeDelimited","deepObject")
 	protected ?string $style = null;
 
 	protected ?bool $explode = null;
