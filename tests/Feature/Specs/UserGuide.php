@@ -2,96 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\Feature;
+namespace Tests\Feature\Specs;
 
 use OpenApiSchema as OA;
-use OpenApiSchema\Operations\ParameterLocation;
-use PHPUnit\Framework\TestCase;
 
-class VeryBasicTest extends TestCase
+class UserGuide implements SpecInterface
 {
-	/**
-	 * Builds the petstore spec, and compares the resulting JSON with example file.
-	 *
-	 * This covers a good chunk of the code.
-	 */
-	public function test_basic(): void
-	{
-		$doc = new OA\Document();
-		$doc->setOpenapi('3.1.0')
-			->setInfo(
-				(new OA\Meta\Info())
-					->setTitle("Example API")
-					->setDescription("An example API using the OpenApiSchema components")
-					->setVersion("1.0.0")
-					->setSummary("A very basic API"),
-			)
-			->addServers(
-				(new OA\Server\Server())->setUrl("/api/v1"),
-			)
-			->addPathItem(
-				"/v1/resource/{id}",
-				(new OA\Operations\PathItem())
-					->setPut(
-						(new OA\Operations\Operation())
-							->setSummary("Update a resource")
-							->setDescription("Update a resource by Id.")
-							->addParameters(
-								(new OA\Operations\Parameter())
-									->setName("id")
-									->setRequired(true)
-									->setIn(ParameterLocation::Path)
-									->setSchema(
-										(new OA\Schema\Schema())->setType("integer"),
-									),
-							)
-							->addResponse(
-								"200",
-								(new OA\Operations\Response())
-									->setDescription("Successful operation")
-									->addMediaType(
-										"application/json",
-										(new OA\Operations\MediaType())
-											->setSchema(
-												(new OA\Schema\Schema())
-													->addProperty(
-														"id",
-														(new OA\Schema\Schema())->setType("integer"),
-													)
-													->addProperty(
-														"name",
-														(new OA\Schema\Schema())->setType("string"),
-													),
-											),
-									),
-							)
-							->addResponse("404", (new OA\Operations\Response())->setDescription("resource not found"))
-							->setRequestBody(
-								(new OA\Operations\RequestBody())
-									->setRequired(true)
-									->setDescription("Resource data structure")
-									->addMediaType(
-										"application/json",
-										(new OA\Operations\MediaType())
-											->setSchema(
-												(new OA\Schema\Schema())
-													->addProperty(
-														"name",
-														(new OA\Schema\Schema())->setType("string"),
-													),
-											),
-									),
-							),
-					),
-			);
-
-		$this->assertJsonStringEqualsJsonFile(
-			__DIR__ . '/examples/very_basic.json',
-			$doc->toJson(new OA\Utils\MarshallingContext()),
-		);
-	}
-
-	public function test_user_guide(): void
+	public function build(): OA\Document
 	{
 		# Step 1
 		$doc = (new OA\Document())->setOpenapi("3.1.0"); //JSON path `.openapi`
@@ -113,13 +30,13 @@ class VeryBasicTest extends TestCase
 						->setSummary("list users") // JSON path `.paths[/api/v1/users].get.summary`
 						->addParameters(
 							(new OA\Operations\Parameter()) // JSON path `.paths[/api/v1/users].get.parameters[0]`
-								->setIn(ParameterLocation::Query) // JSON path `.paths[/api/v1/users].get.parameters[0].in`
+								->setIn(OA\Operations\ParameterLocation::Query) // JSON path `.paths[/api/v1/users].get.parameters[0].in`
 								->setName("page") // JSON path `.paths[/api/v1/users].get.parameters[0].name`
 								->setSchema( // JSON path `.paths[/api/v1/users].get.parameters[0].schema`
 									(new OA\Schema\Schema())->setType("integer"), // JSON path `.paths[/api/v1/users].get.parameters[0].schema.type`
 								),
 							(new OA\Operations\Parameter()) // JSON path `.paths[/api/v1/users].get.parameters[1]`
-								->setIn(ParameterLocation::Query)  // JSON path `.paths[/api/v1/users].get.parameters[1].in`
+								->setIn(OA\Operations\ParameterLocation::Query)  // JSON path `.paths[/api/v1/users].get.parameters[1].in`
 								->setName("page_size") // JSON path `.paths[/api/v1/users].get.parameters[1].name`
 								->setSchema(  // JSON path `.paths[/api/v1/users].get.parameters[1].schema`
 									(new OA\Schema\Schema())->setType("integer"),  // JSON path `.paths[/api/v1/users].get.parameters[1].schema.type`
@@ -195,7 +112,7 @@ class VeryBasicTest extends TestCase
 				->addParameters(
 					(new OA\Operations\Parameter()) // JSON path `.paths[/api/v1/users/{id}].parameters[0]`
 						->setName("id") // JSON path `.paths[/api/v1/users/{id}].parameters[0].name`
-						->setIn(ParameterLocation::Path) // JSON path `.paths[/api/v1/users/{id}].parameters[0].in`
+						->setIn(OA\Operations\ParameterLocation::Path) // JSON path `.paths[/api/v1/users/{id}].parameters[0].in`
 						->setRequired(true) // JSON path `.paths[/api/v1/users/{id}].parameters[0].required`
 						->setSchema(
 							(new OA\Schema\Schema()) // JSON path `.paths[/api/v1/users/{id}].parameters[0].schema`
@@ -267,10 +184,11 @@ class VeryBasicTest extends TestCase
 				),
 		);
 
-		$jsonSpec = $doc->toJson(new OA\Utils\MarshallingContext());
-		$this->assertJsonStringEqualsJsonFile(
-			__DIR__ . '/examples/user_guide.json',
-			$doc->toJson(new OA\Utils\MarshallingContext()),
-		);
+		return $doc;
+	}
+
+	public function assertFile(): string
+	{
+		return __DIR__ . '/examples/user_guide.json';
 	}
 }
