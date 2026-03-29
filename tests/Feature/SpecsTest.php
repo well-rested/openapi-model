@@ -32,6 +32,7 @@ class SpecsTest extends TestCase
 		yield 'very_basic' => [new Specs\VeryBasic()];
 		yield 'user_guide' => [new Specs\UserGuide()];
 		yield 'pet_store:3.1' => [new Specs\PetStore3_1()];
+		yield 'pet_store:3.1:readme_extensions' => [new Specs\PetStore3_1ReadMeExtensions()];
 		yield 'pet_store:3.0' => [new Specs\PetStore3_0()];
 	}
 }
