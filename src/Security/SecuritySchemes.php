@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace OpenApiSchema\Security;
+namespace WellRested\OpenApiModel\Security;
 
-use OpenApiSchema\Utils\Dictionary;
-use OpenApiSchema\Reference;
-use OpenApiSchema\Utils\Marshallable;
+use WellRested\OpenApiModel\Utils\Dictionary;
+use WellRested\OpenApiModel\Reference;
+use WellRested\OpenApiModel\Utils\Marshallable;
 
 /**
  * @extends Dictionary<SecurityScheme|Reference>

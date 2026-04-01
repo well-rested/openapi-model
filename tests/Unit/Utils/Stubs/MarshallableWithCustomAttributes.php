@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Utils\Stubs;
 
-use OpenApiSchema\Utils\CustomAttributeDictionary;
-use OpenApiSchema\Utils\ConvertsSelfToMarshallable;
+use WellRested\OpenApiModel\Utils\CustomAttributeDictionary;
+use WellRested\OpenApiModel\Utils\ConvertsSelfToMarshallable;
 
 class MarshallableWithCustomAttributes
 {

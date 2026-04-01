@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Tests\Unit\Security;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Security\OAuthFlows;
-use OpenApiSchema\Security\OAuthFlow;
+use WellRested\OpenApiModel\Security\OAuthFlows;
+use WellRested\OpenApiModel\Security\OAuthFlow;
 
 class OAuthFlowsTest extends TestCase
 {

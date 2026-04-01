@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace OpenApiSchema\Operations;
+namespace WellRested\OpenApiModel\Operations;
 
-use OpenApiSchema\Schema\Schema;
-use OpenApiSchema\Utils\ConvertsSelfToMarshallable;
-use OpenApiSchema\Utils\HasCustomAttributes;
-use OpenApiSchema\Utils\Marshallable;
+use WellRested\OpenApiModel\Schema\Schema;
+use WellRested\OpenApiModel\Utils\ConvertsSelfToMarshallable;
+use WellRested\OpenApiModel\Utils\HasCustomAttributes;
+use WellRested\OpenApiModel\Utils\Marshallable;
 
 class Parameter implements Marshallable
 {

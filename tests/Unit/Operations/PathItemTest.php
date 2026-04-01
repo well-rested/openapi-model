@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace Tests\Unit\Operations;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Operations\PathItem;
-use OpenApiSchema\Operations\Operation;
-use OpenApiSchema\Operations\Parameter;
-use OpenApiSchema\Operations\Parameters;
-use OpenApiSchema\Server\Server;
-use OpenApiSchema\Server\Servers;
+use WellRested\OpenApiModel\Operations\PathItem;
+use WellRested\OpenApiModel\Operations\Operation;
+use WellRested\OpenApiModel\Operations\Parameter;
+use WellRested\OpenApiModel\Operations\Parameters;
+use WellRested\OpenApiModel\Server\Server;
+use WellRested\OpenApiModel\Server\Servers;
 
 class PathItemTest extends TestCase
 {

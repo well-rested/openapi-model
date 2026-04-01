@@ -3,7 +3,7 @@
     "info": {
         "title": "Example API",
         "summary": "A very basic API",
-        "description": "An example API using the OpenApiSchema components",
+        "description": "An example API using the WellRested\\OpenApiModel components",
         "version": "1.0.0"
     },
     "servers": [

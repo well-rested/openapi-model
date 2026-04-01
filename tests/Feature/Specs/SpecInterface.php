@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Specs;
 
-use OpenApiSchema\Document;
+use WellRested\OpenApiModel\Document;
 
 interface SpecInterface
 {

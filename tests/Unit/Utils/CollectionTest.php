@@ -8,7 +8,7 @@ use Generator;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\Attributes\DataProvider;
-use OpenApiSchema\Utils\MarshallingContext;
+use WellRested\OpenApiModel\Utils\MarshallingContext;
 use Tests\Unit\Utils\Stubs\StringCollection;
 
 class CollectionTest extends TestCase

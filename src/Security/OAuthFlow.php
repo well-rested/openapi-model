@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace OpenApiSchema\Security;
+namespace WellRested\OpenApiModel\Security;
 
-use OpenApiSchema\Utils\Marshallable;
-use OpenApiSchema\Utils\StringDictionary;
-use OpenApiSchema\Utils\HasCustomAttributes;
-use OpenApiSchema\Utils\ConvertsSelfToMarshallable;
+use WellRested\OpenApiModel\Utils\Marshallable;
+use WellRested\OpenApiModel\Utils\StringDictionary;
+use WellRested\OpenApiModel\Utils\HasCustomAttributes;
+use WellRested\OpenApiModel\Utils\ConvertsSelfToMarshallable;
 
 class OAuthFlow implements Marshallable
 {

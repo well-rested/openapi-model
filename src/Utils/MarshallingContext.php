@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace OpenApiSchema\Utils;
+namespace WellRested\OpenApiModel\Utils;
 
 /**
  * Used to pass/retain values throughout the marshalling process. It will be
@@ -35,7 +35,7 @@ class MarshallingContext
 	/**
 	 * Note, this will not set anything if the key is found but has a null value.
 	 *
-	 * @see OpenApiSchema\Utils\Dictionary has
+	 * @see WellRested\OpenApiModel\Utils\Dictionary has
 	 */
 	public function setIfNotExists(string $key, mixed $value): void
 	{

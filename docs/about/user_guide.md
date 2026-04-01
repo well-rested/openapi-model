@@ -25,13 +25,13 @@ Firstly we'll setup the document and define the openapi schema version it's usin
 !!! example
     === "Fluent setters"
         ```php
-        use OpenApiSchema as OA;
+        use WellRested\OpenApiModel as OA;
         $doc = (new OA\Document)->setOpenapi("3.1.0"); // JSON path `.openapi`
         ```
 
     === "Without using Fluent setters"
         ```php
-        use OpenApiSchema as OA;
+        use WellRested\OpenApiModel as OA;
         $doc = new OA\Document;
         $doc->setOpenapi("3.1.0"); // JSON path `.openapi`
         ```

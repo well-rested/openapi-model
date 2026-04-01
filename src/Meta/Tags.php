@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace OpenApiSchema\Meta;
+namespace WellRested\OpenApiModel\Meta;
 
-use OpenApiSchema\Utils\Collection;
-use OpenApiSchema\Utils\Marshallable;
+use WellRested\OpenApiModel\Utils\Collection;
+use WellRested\OpenApiModel\Utils\Marshallable;
 
 /**
  * @extends Collection<Tag>

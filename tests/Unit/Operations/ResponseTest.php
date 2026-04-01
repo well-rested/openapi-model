@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace Tests\Unit\Operations;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Operations\Response;
-use OpenApiSchema\Operations\Headers;
-use OpenApiSchema\Operations\Header;
-use OpenApiSchema\Operations\Content;
-use OpenApiSchema\Operations\MediaType;
+use WellRested\OpenApiModel\Operations\Response;
+use WellRested\OpenApiModel\Operations\Headers;
+use WellRested\OpenApiModel\Operations\Header;
+use WellRested\OpenApiModel\Operations\Content;
+use WellRested\OpenApiModel\Operations\MediaType;
 
 class ResponseTest extends TestCase
 {

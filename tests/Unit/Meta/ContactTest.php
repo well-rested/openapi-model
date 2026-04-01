@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Tests\Unit\Meta;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Meta\Contact;
+use WellRested\OpenApiModel\Meta\Contact;
 
 class ContactTest extends TestCase
 {

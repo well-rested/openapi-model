@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Operations;
 
-use OpenApiSchema\Operations\Parameter;
-use OpenApiSchema\Operations\ParameterLocation;
-use OpenApiSchema\Schema\Schema;
+use WellRested\OpenApiModel\Operations\Parameter;
+use WellRested\OpenApiModel\Operations\ParameterLocation;
+use WellRested\OpenApiModel\Schema\Schema;
 use PHPUnit\Framework\TestCase;
 
 class ParameterTest extends TestCase

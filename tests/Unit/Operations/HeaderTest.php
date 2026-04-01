@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Tests\Unit\Operations;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Operations\Header;
-use OpenApiSchema\Schema\Schema;
-use OpenApiSchema\Operations\Content;
+use WellRested\OpenApiModel\Operations\Header;
+use WellRested\OpenApiModel\Schema\Schema;
+use WellRested\OpenApiModel\Operations\Content;
 
 class HeaderTest extends TestCase
 {

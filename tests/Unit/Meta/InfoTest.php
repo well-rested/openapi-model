@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Tests\Unit\Meta;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Meta\Info;
-use OpenApiSchema\Meta\Contact;
-use OpenApiSchema\Meta\License;
+use WellRested\OpenApiModel\Meta\Info;
+use WellRested\OpenApiModel\Meta\Contact;
+use WellRested\OpenApiModel\Meta\License;
 
 class InfoTest extends TestCase
 {

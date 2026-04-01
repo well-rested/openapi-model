@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Spec;
 
-use OpenApiSchema\Reference;
+use WellRested\OpenApiModel\Reference;
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Utils\Marshallable;
-use OpenApiSchema\Utils\MarshallingContext;
+use WellRested\OpenApiModel\Utils\Marshallable;
+use WellRested\OpenApiModel\Utils\MarshallingContext;
 
 class ReferenceTest extends TestCase
 {

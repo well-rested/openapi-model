@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace OpenApiSchema\Utils;
+namespace WellRested\OpenApiModel\Utils;
 
 /**
  * @extends Dictionary<mixed>

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace OpenApiSchema\Components;
+namespace WellRested\OpenApiModel\Components;
 
-use OpenApiSchema\Utils\Dictionary;
-use OpenApiSchema\Reference;
-use OpenApiSchema\Utils\Marshallable;
+use WellRested\OpenApiModel\Utils\Dictionary;
+use WellRested\OpenApiModel\Reference;
+use WellRested\OpenApiModel\Utils\Marshallable;
 
 /**
  * @extends Dictionary<Example|Reference>

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace OpenApiSchema;
+namespace WellRested\OpenApiModel;
 
-use OpenApiSchema\Utils\Marshallable;
-use OpenApiSchema\Utils\ConvertsSelfToMarshallable;
+use WellRested\OpenApiModel\Utils\Marshallable;
+use WellRested\OpenApiModel\Utils\ConvertsSelfToMarshallable;
 
 class Reference implements Marshallable
 {

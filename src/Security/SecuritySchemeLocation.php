@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace OpenApiSchema\Security;
+namespace WellRested\OpenApiModel\Security;
 
 enum SecuritySchemeLocation: string
 {

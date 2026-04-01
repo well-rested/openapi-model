@@ -5,25 +5,25 @@ declare(strict_types=1);
 namespace Tests\Unit\Components;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Components\Components;
-use OpenApiSchema\Components\Examples;
-use OpenApiSchema\Components\Example;
-use OpenApiSchema\Components\Links;
-use OpenApiSchema\Components\Link;
-use OpenApiSchema\Operations\Headers;
-use OpenApiSchema\Operations\Header;
-use OpenApiSchema\Operations\Parameters;
-use OpenApiSchema\Operations\Parameter;
-use OpenApiSchema\Operations\PathItems;
-use OpenApiSchema\Operations\PathItem;
-use OpenApiSchema\Operations\RequestBodies;
-use OpenApiSchema\Operations\RequestBody;
-use OpenApiSchema\Operations\Response;
-use OpenApiSchema\Operations\Responses;
-use OpenApiSchema\Schema\Schema;
-use OpenApiSchema\Schema\Schemas;
-use OpenApiSchema\Security\SecurityScheme;
-use OpenApiSchema\Security\SecuritySchemes;
+use WellRested\OpenApiModel\Components\Components;
+use WellRested\OpenApiModel\Components\Examples;
+use WellRested\OpenApiModel\Components\Example;
+use WellRested\OpenApiModel\Components\Links;
+use WellRested\OpenApiModel\Components\Link;
+use WellRested\OpenApiModel\Operations\Headers;
+use WellRested\OpenApiModel\Operations\Header;
+use WellRested\OpenApiModel\Operations\Parameters;
+use WellRested\OpenApiModel\Operations\Parameter;
+use WellRested\OpenApiModel\Operations\PathItems;
+use WellRested\OpenApiModel\Operations\PathItem;
+use WellRested\OpenApiModel\Operations\RequestBodies;
+use WellRested\OpenApiModel\Operations\RequestBody;
+use WellRested\OpenApiModel\Operations\Response;
+use WellRested\OpenApiModel\Operations\Responses;
+use WellRested\OpenApiModel\Schema\Schema;
+use WellRested\OpenApiModel\Schema\Schemas;
+use WellRested\OpenApiModel\Security\SecurityScheme;
+use WellRested\OpenApiModel\Security\SecuritySchemes;
 
 class ComponentsTest extends TestCase
 {
