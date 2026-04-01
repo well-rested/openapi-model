@@ -14,8 +14,5 @@ build
 # CS Fixer
 .php-cs-fixer.cache
 
-# NPM
-node_modules
-
 # AI Tools
 .claude
