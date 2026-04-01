@@ -96,3 +96,6 @@ mkdocs-down:
 # set out by commit lint.
 lint-last-commit:
 	@npx --yes --package @commitlint/cli@20 --package @commitlint/config-conventional@20 commitlint --last
+
+test-release:
+	./scripts/semanticrelease.sh --dry-run

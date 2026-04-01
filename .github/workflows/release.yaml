@@ -1,0 +1,30 @@
+name: "RELEASE: Publish"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  preview-release:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: lts/*
+
+      - name: Perform release
+        id: semrel
+        run: |
+          ./scripts/semanticrelease.sh
