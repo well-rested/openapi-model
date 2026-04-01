@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Tests\Unit\Meta;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Meta\Tag;
-use OpenApiSchema\Meta\ExternalDocumentation;
+use WellRested\OpenApiModel\Meta\Tag;
+use WellRested\OpenApiModel\Meta\ExternalDocumentation;
 
 class TagTest extends TestCase
 {

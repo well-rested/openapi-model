@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace OpenApiSchema\Operations;
+namespace WellRested\OpenApiModel\Operations;
 
-use OpenApiSchema\Reference;
-use OpenApiSchema\Server\Server;
-use OpenApiSchema\Server\Servers;
-use OpenApiSchema\Utils\Marshallable;
-use OpenApiSchema\Utils\HasCustomAttributes;
-use OpenApiSchema\Meta\ExternalDocumentation;
-use OpenApiSchema\Security\SecurityRequirements;
-use OpenApiSchema\Utils\ConvertsSelfToMarshallable;
+use WellRested\OpenApiModel\Reference;
+use WellRested\OpenApiModel\Server\Server;
+use WellRested\OpenApiModel\Server\Servers;
+use WellRested\OpenApiModel\Utils\Marshallable;
+use WellRested\OpenApiModel\Utils\HasCustomAttributes;
+use WellRested\OpenApiModel\Meta\ExternalDocumentation;
+use WellRested\OpenApiModel\Security\SecurityRequirements;
+use WellRested\OpenApiModel\Utils\ConvertsSelfToMarshallable;
 
 class Operation implements Marshallable
 {

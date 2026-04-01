@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace OpenApiSchema\Server;
+namespace WellRested\OpenApiModel\Server;
 
-use OpenApiSchema\Utils\Marshallable;
-use OpenApiSchema\Utils\Collection;
+use WellRested\OpenApiModel\Utils\Marshallable;
+use WellRested\OpenApiModel\Utils\Collection;
 
 /**
  * @extends Collection<Server>

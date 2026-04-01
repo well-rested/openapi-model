@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Tests\Unit\Utils;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Utils\CustomAttributeDictionary;
+use WellRested\OpenApiModel\Utils\CustomAttributeDictionary;
 use Tests\Unit\Utils\Stubs\HasCustomAttributesStub;
 
 class HasCustomAttributesTest extends TestCase

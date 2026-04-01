@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Tests\Unit\Operations;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Operations\RequestBody;
-use OpenApiSchema\Operations\Content;
-use OpenApiSchema\Operations\MediaType;
+use WellRested\OpenApiModel\Operations\RequestBody;
+use WellRested\OpenApiModel\Operations\Content;
+use WellRested\OpenApiModel\Operations\MediaType;
 
 class RequestBodyTest extends TestCase
 {

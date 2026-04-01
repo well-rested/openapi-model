@@ -2,26 +2,26 @@
 
 declare(strict_types=1);
 
-namespace OpenApiSchema\Components;
+namespace WellRested\OpenApiModel\Components;
 
-use OpenApiSchema\Reference;
-use OpenApiSchema\Operations\Header;
-use OpenApiSchema\Schema\Schema;
-use OpenApiSchema\Schema\Schemas;
-use OpenApiSchema\Utils\Marshallable;
-use OpenApiSchema\Operations\Headers;
-use OpenApiSchema\Operations\PathItem;
-use OpenApiSchema\Operations\Response;
-use OpenApiSchema\Operations\Parameter;
-use OpenApiSchema\Operations\PathItems;
-use OpenApiSchema\Operations\Responses;
-use OpenApiSchema\Operations\Parameters;
-use OpenApiSchema\Operations\RequestBody;
-use OpenApiSchema\Security\SecurityScheme;
-use OpenApiSchema\Operations\RequestBodies;
-use OpenApiSchema\Security\SecuritySchemes;
-use OpenApiSchema\Utils\HasCustomAttributes;
-use OpenApiSchema\Utils\ConvertsSelfToMarshallable;
+use WellRested\OpenApiModel\Reference;
+use WellRested\OpenApiModel\Operations\Header;
+use WellRested\OpenApiModel\Schema\Schema;
+use WellRested\OpenApiModel\Schema\Schemas;
+use WellRested\OpenApiModel\Utils\Marshallable;
+use WellRested\OpenApiModel\Operations\Headers;
+use WellRested\OpenApiModel\Operations\PathItem;
+use WellRested\OpenApiModel\Operations\Response;
+use WellRested\OpenApiModel\Operations\Parameter;
+use WellRested\OpenApiModel\Operations\PathItems;
+use WellRested\OpenApiModel\Operations\Responses;
+use WellRested\OpenApiModel\Operations\Parameters;
+use WellRested\OpenApiModel\Operations\RequestBody;
+use WellRested\OpenApiModel\Security\SecurityScheme;
+use WellRested\OpenApiModel\Operations\RequestBodies;
+use WellRested\OpenApiModel\Security\SecuritySchemes;
+use WellRested\OpenApiModel\Utils\HasCustomAttributes;
+use WellRested\OpenApiModel\Utils\ConvertsSelfToMarshallable;
 
 class Components implements Marshallable
 {

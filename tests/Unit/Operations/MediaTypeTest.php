@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Tests\Unit\Operations;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Operations\MediaType;
-use OpenApiSchema\Schema\Schema;
-use OpenApiSchema\Operations\Encoding;
+use WellRested\OpenApiModel\Operations\MediaType;
+use WellRested\OpenApiModel\Schema\Schema;
+use WellRested\OpenApiModel\Operations\Encoding;
 
 class MediaTypeTest extends TestCase
 {

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Utils\Stubs;
 
-use OpenApiSchema\Utils\HasCustomAttributes;
-use OpenApiSchema\Utils\CustomAttributeDictionary;
+use WellRested\OpenApiModel\Utils\HasCustomAttributes;
+use WellRested\OpenApiModel\Utils\CustomAttributeDictionary;
 
 class HasCustomAttributesStub
 {

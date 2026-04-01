@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace Tests\Unit\Spec;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Server\Server;
-use OpenApiSchema\Components\Link;
-use OpenApiSchema\Utils\Marshallable;
-use OpenApiSchema\Utils\StringDictionary;
-use OpenApiSchema\Utils\MarshallingContext;
+use WellRested\OpenApiModel\Server\Server;
+use WellRested\OpenApiModel\Components\Link;
+use WellRested\OpenApiModel\Utils\Marshallable;
+use WellRested\OpenApiModel\Utils\StringDictionary;
+use WellRested\OpenApiModel\Utils\MarshallingContext;
 use PHPUnit\Framework\MockObject\MockObject;
 
 class LinkTest extends TestCase

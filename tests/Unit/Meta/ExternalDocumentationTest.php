@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Tests\Unit\Meta;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Meta\ExternalDocumentation;
+use WellRested\OpenApiModel\Meta\ExternalDocumentation;
 
 class ExternalDocumentationTest extends TestCase
 {

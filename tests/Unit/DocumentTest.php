@@ -5,20 +5,20 @@ declare(strict_types=1);
 namespace Tests\Unit\Spec;
 
 use stdClass;
-use OpenApiSchema\Document;
-use OpenApiSchema\Meta\Tag;
-use OpenApiSchema\Meta\Info;
-use OpenApiSchema\Meta\Tags;
+use WellRested\OpenApiModel\Document;
+use WellRested\OpenApiModel\Meta\Tag;
+use WellRested\OpenApiModel\Meta\Info;
+use WellRested\OpenApiModel\Meta\Tags;
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Server\Server;
-use OpenApiSchema\Server\Servers;
-use OpenApiSchema\Operations\PathItem;
-use OpenApiSchema\Operations\PathItems;
-use OpenApiSchema\Components\Components;
-use OpenApiSchema\Utils\MarshallingContext;
-use OpenApiSchema\Meta\ExternalDocumentation;
-use OpenApiSchema\Security\SecurityRequirement;
-use OpenApiSchema\Security\SecurityRequirements;
+use WellRested\OpenApiModel\Server\Server;
+use WellRested\OpenApiModel\Server\Servers;
+use WellRested\OpenApiModel\Operations\PathItem;
+use WellRested\OpenApiModel\Operations\PathItems;
+use WellRested\OpenApiModel\Components\Components;
+use WellRested\OpenApiModel\Utils\MarshallingContext;
+use WellRested\OpenApiModel\Meta\ExternalDocumentation;
+use WellRested\OpenApiModel\Security\SecurityRequirement;
+use WellRested\OpenApiModel\Security\SecurityRequirements;
 
 class DocumentTest extends TestCase
 {

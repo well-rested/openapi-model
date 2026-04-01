@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Specs;
 
-use OpenApiSchema as OA;
+use WellRested\OpenApiModel as OA;
 
 class UserGuide implements SpecInterface
 {

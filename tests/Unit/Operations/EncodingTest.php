@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Tests\Unit\Operations;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Operations\Encoding;
-use OpenApiSchema\Operations\Headers;
-use OpenApiSchema\Operations\Header;
+use WellRested\OpenApiModel\Operations\Encoding;
+use WellRested\OpenApiModel\Operations\Headers;
+use WellRested\OpenApiModel\Operations\Header;
 
 class EncodingTest extends TestCase
 {

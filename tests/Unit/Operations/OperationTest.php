@@ -5,19 +5,19 @@ declare(strict_types=1);
 namespace Tests\Unit\Operations;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Operations\Operation;
-use OpenApiSchema\Operations\Parameter;
-use OpenApiSchema\Operations\Parameters;
-use OpenApiSchema\Operations\RequestBody;
-use OpenApiSchema\Operations\Response;
-use OpenApiSchema\Operations\Responses;
-use OpenApiSchema\Operations\PathItem;
-use OpenApiSchema\Operations\PathItems;
-use OpenApiSchema\Operations\Security;
-use OpenApiSchema\Server\Server;
-use OpenApiSchema\Server\Servers;
-use OpenApiSchema\Meta\ExternalDocumentation;
-use OpenApiSchema\Security\SecurityRequirements;
+use WellRested\OpenApiModel\Operations\Operation;
+use WellRested\OpenApiModel\Operations\Parameter;
+use WellRested\OpenApiModel\Operations\Parameters;
+use WellRested\OpenApiModel\Operations\RequestBody;
+use WellRested\OpenApiModel\Operations\Response;
+use WellRested\OpenApiModel\Operations\Responses;
+use WellRested\OpenApiModel\Operations\PathItem;
+use WellRested\OpenApiModel\Operations\PathItems;
+use WellRested\OpenApiModel\Operations\Security;
+use WellRested\OpenApiModel\Server\Server;
+use WellRested\OpenApiModel\Server\Servers;
+use WellRested\OpenApiModel\Meta\ExternalDocumentation;
+use WellRested\OpenApiModel\Security\SecurityRequirements;
 
 class OperationTest extends TestCase
 {

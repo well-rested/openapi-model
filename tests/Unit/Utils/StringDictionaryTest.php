@@ -6,8 +6,8 @@ namespace Tests\Unit\Utils;
 
 use Generator;
 use InvalidArgumentException;
-use OpenApiSchema\Utils\MarshallingContext;
-use OpenApiSchema\Utils\StringDictionary;
+use WellRested\OpenApiModel\Utils\MarshallingContext;
+use WellRested\OpenApiModel\Utils\StringDictionary;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use stdClass;

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Tests\Unit\Components;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Components\Example;
+use WellRested\OpenApiModel\Components\Example;
 
 class ExampleTest extends TestCase
 {

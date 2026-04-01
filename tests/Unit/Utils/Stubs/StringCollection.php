@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Utils\Stubs;
 
-use OpenApiSchema\Utils\Collection;
+use WellRested\OpenApiModel\Utils\Collection;
 
 /**
  * @extends Collection<string>

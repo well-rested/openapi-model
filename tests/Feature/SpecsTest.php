@@ -9,7 +9,7 @@ use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Tests\Feature\Specs\SpecInterface;
 use Tests\Feature\Specs as Specs;
-use OpenApiSchema as OA;
+use WellRested\OpenApiModel as OA;
 
 /**
  * Most of the specs have come from https://github.com/readmeio/oas at v 5.16.1

@@ -2,24 +2,24 @@
 
 declare(strict_types=1);
 
-namespace OpenApiSchema;
+namespace WellRested\OpenApiModel;
 
 use RuntimeException;
-use OpenApiSchema\Meta\Tag;
-use OpenApiSchema\Meta\Info;
-use OpenApiSchema\Meta\Tags;
-use OpenApiSchema\Server\Server;
-use OpenApiSchema\Server\Servers;
-use OpenApiSchema\Utils\Marshallable;
-use OpenApiSchema\Operations\PathItem;
-use OpenApiSchema\Operations\PathItems;
-use OpenApiSchema\Components\Components;
-use OpenApiSchema\Utils\MarshallingContext;
-use OpenApiSchema\Utils\HasCustomAttributes;
-use OpenApiSchema\Meta\ExternalDocumentation;
-use OpenApiSchema\Security\SecurityRequirement;
-use OpenApiSchema\Security\SecurityRequirements;
-use OpenApiSchema\Utils\ConvertsSelfToMarshallable;
+use WellRested\OpenApiModel\Meta\Tag;
+use WellRested\OpenApiModel\Meta\Info;
+use WellRested\OpenApiModel\Meta\Tags;
+use WellRested\OpenApiModel\Server\Server;
+use WellRested\OpenApiModel\Server\Servers;
+use WellRested\OpenApiModel\Utils\Marshallable;
+use WellRested\OpenApiModel\Operations\PathItem;
+use WellRested\OpenApiModel\Operations\PathItems;
+use WellRested\OpenApiModel\Components\Components;
+use WellRested\OpenApiModel\Utils\MarshallingContext;
+use WellRested\OpenApiModel\Utils\HasCustomAttributes;
+use WellRested\OpenApiModel\Meta\ExternalDocumentation;
+use WellRested\OpenApiModel\Security\SecurityRequirement;
+use WellRested\OpenApiModel\Security\SecurityRequirements;
+use WellRested\OpenApiModel\Utils\ConvertsSelfToMarshallable;
 
 class Document implements Marshallable
 {

@@ -7,7 +7,7 @@ namespace Tests\Unit\Utils;
 use Generator;
 use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\Attributes\DataProvider;
-use OpenApiSchema\Utils\CustomAttributeDictionary;
+use WellRested\OpenApiModel\Utils\CustomAttributeDictionary;
 
 class CustomAttributeDictionaryTest extends TestCase
 {

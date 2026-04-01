@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Tests\Unit\Utils;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Utils\MarshallingContext;
+use WellRested\OpenApiModel\Utils\MarshallingContext;
 
 class MarshallingContextTest extends TestCase
 {

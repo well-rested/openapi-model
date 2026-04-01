@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace OpenApiSchema\Utils;
+namespace WellRested\OpenApiModel\Utils;
 
 use stdClass;
 use RuntimeException;
@@ -11,7 +11,7 @@ use RuntimeException;
  * Provides utility functions that can convert the using object into a
  * "marshallable" data structure.
  *
- * @see OpenApiSchema\Utils\Marshallable
+ * @see WellRested\OpenApiModel\Utils\Marshallable
  */
 trait ConvertsSelfToMarshallable
 {
@@ -31,7 +31,7 @@ trait ConvertsSelfToMarshallable
 
 	/**
 	 * This changes the behaviour of toMarshallable so that if it comes across
-	 * a value that is a type of OpenApiSchema\Utils\Collection, instead of including
+	 * a value that is a type of WellRested\OpenApiModel\Utils\Collection, instead of including
 	 * the property as an empty array, the key where the value was found will be
 	 * omitted completely from the marshallable data structure.
 	 */

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace OpenApiSchema\Components;
+namespace WellRested\OpenApiModel\Components;
 
-use OpenApiSchema\Server\Server;
-use OpenApiSchema\Utils\Marshallable;
-use OpenApiSchema\Utils\StringDictionary;
-use OpenApiSchema\Utils\HasCustomAttributes;
-use OpenApiSchema\Utils\ConvertsSelfToMarshallable;
+use WellRested\OpenApiModel\Server\Server;
+use WellRested\OpenApiModel\Utils\Marshallable;
+use WellRested\OpenApiModel\Utils\StringDictionary;
+use WellRested\OpenApiModel\Utils\HasCustomAttributes;
+use WellRested\OpenApiModel\Utils\ConvertsSelfToMarshallable;
 
 class Link implements Marshallable
 {

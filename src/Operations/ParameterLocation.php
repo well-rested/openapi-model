@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace OpenApiSchema\Operations;
+namespace WellRested\OpenApiModel\Operations;
 
 enum ParameterLocation: string
 {

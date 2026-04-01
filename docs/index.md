@@ -14,16 +14,16 @@ This package aims to be an OOP representation of an Open API schema for php, to 
 
     === "PHP Code"
         ```php
-        use OpenApiSchema\Document;
-        use OpenApiSchema\Server\Server;
-        use OpenApiSchema\Operations\Schema;
-        use OpenApiSchema\Operations\PathItem;
-        use OpenApiSchema\Operations\Response;
-        use OpenApiSchema\Operations\MediaType;
-        use OpenApiSchema\Operations\Operation;
-        use OpenApiSchema\Operations\Parameter;
-        use OpenApiSchema\Spec\MarshallingContext;
-        use OpenApiSchema\Operations\RequestBody;
+        use WellRested\OpenApiModel\Document;
+        use WellRested\OpenApiModel\Server\Server;
+        use WellRested\OpenApiModel\Operations\Schema;
+        use WellRested\OpenApiModel\Operations\PathItem;
+        use WellRested\OpenApiModel\Operations\Response;
+        use WellRested\OpenApiModel\Operations\MediaType;
+        use WellRested\OpenApiModel\Operations\Operation;
+        use WellRested\OpenApiModel\Operations\Parameter;
+        use WellRested\OpenApiModel\Spec\MarshallingContext;
+        use WellRested\OpenApiModel\Operations\RequestBody;
 
         $doc = new Document;
 
@@ -31,7 +31,7 @@ This package aims to be an OOP representation of an Open API schema for php, to 
         	->setInfo(
         		(new Info())
         			->setTitle("Example API")
-        			->setDescription("An example API using the OpenApiSchema components")
+        			->setDescription("An example API using the WellRested\OpenApiModel components")
         			->setVersion("1.0.0")
         			->setSummary("A very basic API"),
         	)
@@ -104,7 +104,7 @@ This package aims to be an OOP representation of an Open API schema for php, to 
             "info": {
                 "title": "Example API",
                 "summary": "A very basic API",
-                "description": "An example API using the OpenApiSchema components",
+                "description": "An example API using the WellRested\OpenApiModel components",
                 "version": "1.0.0"
             },
             "servers": [

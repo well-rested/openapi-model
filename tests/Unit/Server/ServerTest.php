@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Tests\Unit\Server;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Server\Server;
-use OpenApiSchema\Server\ServerVariable;
-use OpenApiSchema\Server\ServerVariables;
+use WellRested\OpenApiModel\Server\Server;
+use WellRested\OpenApiModel\Server\ServerVariable;
+use WellRested\OpenApiModel\Server\ServerVariables;
 
 class ServerTest extends TestCase
 {

@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Utils\Stubs;
 
-use OpenApiSchema\Utils\Collection;
-use OpenApiSchema\Utils\Dictionary;
-use OpenApiSchema\Utils\ConvertsSelfToMarshallable;
+use WellRested\OpenApiModel\Utils\Collection;
+use WellRested\OpenApiModel\Utils\Dictionary;
+use WellRested\OpenApiModel\Utils\ConvertsSelfToMarshallable;
 
 class MarshallableBase
 {

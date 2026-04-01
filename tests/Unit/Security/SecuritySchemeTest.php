@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Tests\Unit\Security;
 
 use PHPUnit\Framework\TestCase;
-use OpenApiSchema\Security\SecurityScheme;
-use OpenApiSchema\Security\OAuthFlows;
-use OpenApiSchema\Security\SecuritySchemeLocation;
+use WellRested\OpenApiModel\Security\SecurityScheme;
+use WellRested\OpenApiModel\Security\OAuthFlows;
+use WellRested\OpenApiModel\Security\SecuritySchemeLocation;
 
 class SecuritySchemeTest extends TestCase
 {

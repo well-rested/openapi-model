@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace OpenApiSchema\Operations;
+namespace WellRested\OpenApiModel\Operations;
 
-use OpenApiSchema\Utils\Collection;
-use OpenApiSchema\Security\SecurityRequirements;
-use OpenApiSchema\Utils\Marshallable;
+use WellRested\OpenApiModel\Utils\Collection;
+use WellRested\OpenApiModel\Security\SecurityRequirements;
+use WellRested\OpenApiModel\Utils\Marshallable;
 
 /**
  * @extends Collection<SecurityRequirements>

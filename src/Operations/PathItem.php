@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace OpenApiSchema\Operations;
+namespace WellRested\OpenApiModel\Operations;
 
-use OpenApiSchema\Reference;
-use OpenApiSchema\Server\Server;
-use OpenApiSchema\Server\Servers;
-use OpenApiSchema\Utils\Marshallable;
-use OpenApiSchema\Utils\HasCustomAttributes;
-use OpenApiSchema\Utils\ConvertsSelfToMarshallable;
+use WellRested\OpenApiModel\Reference;
+use WellRested\OpenApiModel\Server\Server;
+use WellRested\OpenApiModel\Server\Servers;
+use WellRested\OpenApiModel\Utils\Marshallable;
+use WellRested\OpenApiModel\Utils\HasCustomAttributes;
+use WellRested\OpenApiModel\Utils\ConvertsSelfToMarshallable;
 
 class PathItem implements Marshallable
 {

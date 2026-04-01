@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Specs;
 
-use OpenApiSchema as OA;
+use WellRested\OpenApiModel as OA;
 
 class VeryBasic implements SpecInterface
 {
@@ -15,7 +15,7 @@ class VeryBasic implements SpecInterface
 			->setInfo(
 				(new OA\Meta\Info())
 					->setTitle("Example API")
-					->setDescription("An example API using the OpenApiSchema components")
+					->setDescription("An example API using the WellRested\OpenApiModel components")
 					->setVersion("1.0.0")
 					->setSummary("A very basic API"),
 			)
