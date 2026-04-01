@@ -95,4 +95,4 @@ mkdocs-down:
 # Lints the last commit on the current branch to ensure it adheres to the standards
 # set out by commit lint.
 lint-last-commit:
-	@npx commitlint --last
+	@npx --yes --package @commitlint/cli@20 --package @commitlint/config-conventional@20 commitlint --last
